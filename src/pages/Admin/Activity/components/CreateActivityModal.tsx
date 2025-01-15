@@ -57,7 +57,7 @@ const CreateActivityModal: React.FC<CreateActivityModalProps> = ({
                     .toISOString(),
                 times: data.times.map((time) => ({
                     name: time.name,
-                    numberRequire: time.number_require,
+                    numberRequire: time.numberRequire,
                     startTime: dayjs(time.date)
                         .hour(time.time[0].hour())
                         .minute(time.time[0].minute())
@@ -254,7 +254,7 @@ const CreateActivityModal: React.FC<CreateActivityModalProps> = ({
                                             <Form.Item
                                                 {...restField}
                                                 label="Số lượng"
-                                                name={[name, 'number_require']}
+                                                name={[name, 'numberRequire']}
                                                 rules={[
                                                     {
                                                         required: true,

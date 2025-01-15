@@ -37,8 +37,6 @@ import './index.scss';
 
 const ActivityDetail: React.FC = () => {
     const { id } = useParams();
-    console.log(id);
-
     const dispatch = useAppDispatch();
     const { activity, loading, member } = useSelector(activitySelector);
     const { user } = useSelector(authSelector);
