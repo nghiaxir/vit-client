@@ -56,10 +56,10 @@ const Activity: React.FC = () => {
     };
 
     const columns: ColumnsType<DataType> = [
-        {
-            title: '#',
-            dataIndex: 'id',
-        },
+        // {
+        //     title: '#',
+        //     dataIndex: 'id',
+        // },
         {
             title: 'Tên hoạt động',
             dataIndex: 'name',

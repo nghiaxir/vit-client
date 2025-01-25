@@ -5,31 +5,31 @@ import { API } from './axios';
 const prefix = 'activity';
 
 export interface ConfirmationDto {
-  userId: number;
-  timeId: number;
+    userId: String;
+    timeId: number;
 }
 
 export interface RegisterActivity {
-  activityId: number;
-  timeId: number;
+    activityId: number;
+    timeId: number;
 }
 
 export const getActivityMember = (
-  id: number
+    id: number
 ): Promise<AxiosResponse<{ data: GetActivityMember[] }>> =>
-  API.get(`${prefix}/member/${id}`);
+    API.get(`${prefix}/member/${id}`);
 
 export const approveActivity = (
-  data: ConfirmationDto
+    data: ConfirmationDto
 ): Promise<AxiosResponse<any>> => API.post(`${prefix}/approve`, data);
 
 export const rejectActivity = (
-  data: ConfirmationDto
+    data: ConfirmationDto
 ): Promise<AxiosResponse<any>> => API.post(`${prefix}/reject`, data);
 
 export const registerActivity = (
-  data: RegisterActivity
+    data: RegisterActivity
 ): Promise<AxiosResponse<any>> => API.post(`${prefix}/register`, data);
 
 export const withdrawnActivity = (id: number): Promise<AxiosResponse<any>> =>
-  API.put(`${prefix}/withdrawn/${id}`);
+    API.put(`${prefix}/withdrawn/${id}`);
