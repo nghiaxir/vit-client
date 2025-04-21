@@ -21,7 +21,7 @@ export interface User {
     hometown?: string;
     address?: string;
     school?: string;
-    student_id?: string;
+    studentId?: string;
     class?: string;
     cccd?: string;
     dateJoin?: string;

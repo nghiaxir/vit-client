@@ -305,8 +305,7 @@ const Member: React.FC = () => {
                 formData
             );
             await getMembers();
-            message.success('Cập nhật vị trí thành viên thành công');
-            console.log(data);
+            message.success('Cập nhật thông tin thành viên thành công');
         } catch (error: any) {
             message.error(error.response.data.message);
         } finally {
@@ -387,7 +386,7 @@ const Member: React.FC = () => {
                     <Form.Item label="Lớp" name="class">
                         <Input />
                     </Form.Item>
-                    <Form.Item label="MSSV" name="student_id">
+                    <Form.Item label="MSSV" name="studentId">
                         <Input />
                     </Form.Item>
                     <Form.Item label="Ngày vào Đội" name="dateJoin">
@@ -553,6 +552,7 @@ const Member: React.FC = () => {
                     labelCol={{ span: 8 }}
                     wrapperCol={{ span: 16 }}
                     style={{ maxWidth: 600 }}
+                    labelAlign="left"
                     initialValues={currMember}
                     onFinish={handleEditFormSubmit}
                 >
@@ -562,8 +562,42 @@ const Member: React.FC = () => {
                     <Form.Item label="Email" name="email">
                         <Input disabled />
                     </Form.Item>
-                    <Form.Item label="Số điện thoại" name="phone">
-                        <Input disabled />
+                    <Form.Item
+                        label="Họ tên"
+                        name="fullname"
+                        rules={[
+                            { required: true, message: 'Vui lòng nhập họ tên' },
+                        ]}
+                    >
+                        <Input />
+                    </Form.Item>
+                    <Form.Item
+                        rules={[
+                            {
+                                required: true,
+                                message: 'Vui lòng nhập số điện thoại',
+                            },
+                        ]}
+                        label="Số điện thoại"
+                        name="phone"
+                    >
+                        <Input maxLength={10} />
+                    </Form.Item>
+                    <Form.Item label="Giới tính" name="gender">
+                        <Radio.Group>
+                            <Radio value="MALE">Nam</Radio>
+                            <Radio value="FEMALE">Nữ</Radio>
+                            <Radio value="OTHER">Khác</Radio>
+                        </Radio.Group>
+                    </Form.Item>
+                    <Form.Item label="Trường (Khoa/Viện)" name="school">
+                        <Input />
+                    </Form.Item>
+                    <Form.Item label="Lớp" name="class">
+                        <Input />
+                    </Form.Item>
+                    <Form.Item label="MSSV" name="studentId">
+                        <Input />
                     </Form.Item>
                     <Form.Item
                         id="position-select"

@@ -21,7 +21,7 @@ export interface CreateMemberValues {
     birthday: Dayjs;
     school: string;
     class: string;
-    student_id: string;
+    studentId: string;
     dateJoin: Dayjs;
     gender: string;
     position: string;

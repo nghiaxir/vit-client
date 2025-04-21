@@ -313,14 +313,14 @@ const Profile: React.FC = () => {
                                     </Col>
                                 </Row>
                             )}
-                            {profile?.student_id && (
+                            {profile?.studentId && (
                                 <Row align="middle">
                                     <Col span={6}>
                                         <Title level={4}>MSSV:</Title>
                                     </Col>
                                     <Col span={18}>
                                         <Title level={4}>
-                                            {profile?.student_id}
+                                            {profile?.studentId}
                                         </Title>
                                     </Col>
                                 </Row>
@@ -452,7 +452,7 @@ const Profile: React.FC = () => {
                         <Form.Item label="Lớp" name="class">
                             <Input />
                         </Form.Item>
-                        <Form.Item label="MSSV" name="student_id">
+                        <Form.Item label="MSSV" name="studentId">
                             <Input />
                         </Form.Item>
                         <Form.Item label="Số CCCD/CMT" name="cccd">
