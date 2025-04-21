@@ -20,6 +20,7 @@ import {
     deleteActivity,
     getAllActivity,
     getAllActivityDeleted,
+    getAllCampains,
     restoreActivity,
 } from 'redux/actions';
 import {
@@ -38,7 +39,7 @@ interface DataType extends ActivityType {
 
 const Activity: React.FC = () => {
     const dispatch = useAppDispatch();
-    const { activities, deletedActivities, loading } =
+    const { activities, deletedActivities, loading, campains } =
         useSelector(activitySelector);
     const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
     const [isViewActivityOpen, setIsViewActivityOpen] = useState(false);
@@ -67,6 +68,11 @@ const Activity: React.FC = () => {
         tab !== 'deleted' && {
             title: 'Mô tả',
             dataIndex: 'description',
+            render: (dataIndex: string) => (
+                <Typography.Text style={{ whiteSpace: 'pre-line' }}>
+                    {dataIndex}
+                </Typography.Text>
+            ),
         },
         {
             title: 'Hạn đăng ký',
@@ -227,8 +233,13 @@ const Activity: React.FC = () => {
         dispatch(getAllActivityDeleted(defaultQueryParam));
     };
 
+    const getCampains = async () => {
+        dispatch(getAllCampains(defaultQueryParam));
+    };
+
     useEffect(() => {
         document.title = 'VIT | Quản lý hoạt động';
+        getCampains();
         getActivities();
     }, []);
 
@@ -313,6 +324,7 @@ const Activity: React.FC = () => {
             <CreateActivityModal
                 show={isCreateModalOpen}
                 setShow={setIsCreateModalOpen}
+                listCampains={campains}
             />
 
             <ActivityDetail

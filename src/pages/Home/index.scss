@@ -1,44 +1,27 @@
 @import '../../assets/scss/variables';
 
 .home {
-  padding-top: $headerHeight;
-
-  .left-right-side {
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
+    padding-top: $headerHeight;
     width: 100%;
-    z-index: 10;
+    .left-side {
+        max-width: 250px;
+    }
+    .main {
+        border-left: 1px solid #e5e7eb;
+        border-right: 1px solid #e5e7eb;
+        height: fit-content;
+        width: calc(100% - 500px);
+        .card {
+        }
 
-    .left-side,
+        .qa-hot {
+            background-color: #eee;
+            border: 1px solid #333;
+            border-radius: 10px;
+            overflow-y: auto;
+        }
+    }
     .right-side {
-      flex: 0 0 20.83333333333333%;
-      max-width: 20.83333333333333%;
+        max-width: 250px;
     }
-  }
-
-  .main {
-    border: 1px solid #333;
-    border-bottom: none;
-    border-top-left-radius: 24px;
-    border-top-right-radius: 24px;
-    height: 100%;
-
-    .card {
-      width: 90%;
-      height: 300px;
-
-      img {
-        height: 100%;
-      }
-    }
-
-    .qa-hot {
-      max-height: 150px;
-      background-color: #eee;
-      border: 1px solid #333;
-      border-radius: 10px;
-      overflow-y: auto;
-    }
-  }
 }

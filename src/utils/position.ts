@@ -15,7 +15,7 @@ const Position = {
     CN_DANCER: 'Chủ nhiệm CLB VIT Dancer',
     NHOM_TRUONG: 'Nhóm trưởng',
     NHOM_PHO: 'Nhóm phó',
-    MEMBER: 'Thành viên',
+    THANH_VIEN: 'Thành viên',
 };
 
 export const getPosition = (key: string) =>

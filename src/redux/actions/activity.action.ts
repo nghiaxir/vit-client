@@ -6,7 +6,7 @@ import {
     USER_ACTIVITY_STATUS,
     defaultQueryParam,
 } from 'src/constants';
-import { Activity } from '../slices/activity.slice';
+import { Activity, Campain } from '../slices/activity.slice';
 
 const prefix = 'activity';
 
@@ -15,6 +15,8 @@ export interface CreateActivityDto {
     description: string;
     location: string;
     deadline: string;
+    isCampain: boolean;
+    parentId: string;
     event_id?: number;
     times: Array<{
         name: string;
@@ -55,6 +57,21 @@ export const getAllActivity = createAsyncThunk<Activity[], QueryParamType>(
             const {
                 data: { data: res },
             } = await API.get(`${prefix}`, { params });
+            return res;
+        } catch (error: any) {
+            message.error(error.response.data.message);
+            return rejectWithValue(error.response.data);
+        }
+    }
+);
+
+export const getAllCampains = createAsyncThunk<Campain[], QueryParamType>(
+    'activity/getAllCampains',
+    async (param: any, { rejectWithValue }) => {
+        try {
+            const {
+                data: { data: res },
+            } = await API.get(`${prefix}/campains`);
             return res;
         } catch (error: any) {
             message.error(error.response.data.message);

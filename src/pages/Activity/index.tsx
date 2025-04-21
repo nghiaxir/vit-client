@@ -26,7 +26,7 @@ const Activity: React.FC = () => {
     return (
         <div className="activity m-6">
             <Typography.Title level={4}>Danh sách hoạt động</Typography.Title>
-            <Row gutter={16}>
+            <Row gutter={[16, 16]}>
                 {activities?.map((activity) => (
                     <Col key={activity.id} span={6}>
                         <ActivityItem activity={activity} />

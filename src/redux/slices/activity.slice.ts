@@ -7,6 +7,7 @@ import {
     getActivityMember,
     getAllActivity,
     getAllActivityDeleted,
+    getAllCampains,
     restoreActivity,
     updateActivity,
 } from '../actions';
@@ -27,6 +28,10 @@ export interface Activity {
     deleted_at: string | null;
 }
 
+export interface Campain {
+    id: string;
+    name: string;
+}
 export interface ActivityTime {
     id: number;
     name: string;
@@ -39,6 +44,7 @@ export interface ActivityState {
     activities: Activity[];
     activity?: Activity;
     deletedActivities: Activity[];
+    campains: Campain[];
     member: ActivityMemberState[];
     loading: boolean;
 }
@@ -47,6 +53,7 @@ const initialState: ActivityState = {
     activities: [],
     activity: undefined,
     deletedActivities: [],
+    campains: [],
     member: [],
     loading: false,
 };
@@ -178,6 +185,19 @@ export const activitySlice = createSlice({
                 action: PayloadAction<GetActivityMember[]>
             ) => {
                 state.member = convertData(action.payload);
+                state.loading = false;
+            }
+        );
+        builder.addCase(getAllCampains.pending, (state: ActivityState) => {
+            state.loading = true;
+        });
+        builder.addCase(getAllCampains.rejected, (state: ActivityState) => {
+            state.loading = false;
+        });
+        builder.addCase(
+            getAllCampains.fulfilled,
+            (state: ActivityState, action: PayloadAction<Campain[]>) => {
+                state.campains = action.payload;
                 state.loading = false;
             }
         );

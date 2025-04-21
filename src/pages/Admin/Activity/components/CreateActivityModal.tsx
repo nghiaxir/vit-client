@@ -8,6 +8,8 @@ import {
     Row,
     TimePicker,
     Typography,
+    Radio,
+    Select,
 } from 'antd';
 import dayjs from 'dayjs';
 import React, { Dispatch, SetStateAction, useState } from 'react';
@@ -17,15 +19,18 @@ import { useAppDispatch } from 'redux/store';
 import { DATE_FORMAT, TIME_FORMAT } from 'src/constants';
 import { ActivityValues } from '../types';
 import { log } from 'node:console';
+import { Campain } from '../../../../redux/slices/activity.slice';
 
 interface CreateActivityModalProps {
     show: boolean;
     setShow: Dispatch<SetStateAction<boolean>>;
+    listCampains: Campain[];
 }
 
 const CreateActivityModal: React.FC<CreateActivityModalProps> = ({
     show,
     setShow,
+    listCampains,
 }) => {
     const dispatch = useAppDispatch();
     const [form] = Form.useForm<ActivityValues>();
@@ -38,17 +43,22 @@ const CreateActivityModal: React.FC<CreateActivityModalProps> = ({
     };
 
     const handleCancel = () => {
+        form.resetFields();
         setShow(false);
     };
 
-    const handleSubmit = async (data: ActivityValues) => {
-        console.log(data);
+    const onSearch = (value: string) => {
+        console.log('search:', value);
+    };
 
+    const handleSubmit = async (data: ActivityValues) => {
         dispatch(
             createActivity({
                 name: data.name,
                 description: data.description,
                 location: data.location,
+                isCampain: Boolean(data.isCampain),
+                parentId: data.parentId,
                 deadline: dayjs(data.deadline_date)
                     .hour(data.deadline_time.hour())
                     .minute(data.deadline_time.minute())
@@ -91,7 +101,7 @@ const CreateActivityModal: React.FC<CreateActivityModalProps> = ({
             onCancel={handleCancel}
             okText="Tạo hoạt động"
             cancelText="Huỷ"
-            width={600}
+            width={640}
         >
             <Form
                 form={form}
@@ -123,7 +133,7 @@ const CreateActivityModal: React.FC<CreateActivityModalProps> = ({
                         },
                     ]}
                 >
-                    <Input />
+                    <Input.TextArea rows={4} />
                 </Form.Item>
                 <Form.Item
                     label="Địa điểm"
@@ -136,6 +146,47 @@ const CreateActivityModal: React.FC<CreateActivityModalProps> = ({
                     ]}
                 >
                     <Input />
+                </Form.Item>
+                <Form.Item
+                    label="Loại hoạt động"
+                    name="isCampain"
+                    rules={[
+                        {
+                            required: true,
+                            message: 'Vui lòng chọn loại hoạt động',
+                        },
+                    ]}
+                >
+                    <Radio.Group
+                        options={[
+                            {
+                                value: 0,
+                                label: 'Hoạt động bình thường',
+                            },
+                            {
+                                value: 1,
+                                label: 'Chiến dịch',
+                            },
+                        ]}
+                    />
+                </Form.Item>
+                <Form.Item
+                    label="Chọn chiến dịch (nếu hoạt động nằm trong chiến dịch)"
+                    name="parentId"
+                >
+                    <Select
+                        showSearch
+                        placeholder="Chọn chiến dịch"
+                        allowClear
+                        optionFilterProp="label"
+                        onSearch={onSearch}
+                        options={listCampains.map((campain) => {
+                            return {
+                                label: campain.name,
+                                value: campain.id,
+                            };
+                        })}
+                    />
                 </Form.Item>
                 <Typography>Deadline đăng ký</Typography>
                 <Row gutter={16}>
@@ -201,7 +252,13 @@ const CreateActivityModal: React.FC<CreateActivityModalProps> = ({
                                                     },
                                                 ]}
                                             >
-                                                <Input />
+                                                <Input
+                                                    disabled={
+                                                        form.getFieldValue(
+                                                            'isCampain'
+                                                        ) == 0
+                                                    }
+                                                />
                                             </Form.Item>
                                         </Col>
                                         <Col span={6}>

@@ -97,16 +97,16 @@ const Member: React.FC = () => {
             dataIndex: 'phone',
         },
         {
-            key: 'date_join',
+            key: 'dateJoin',
             title: 'Ngày vào Đội',
-            dataIndex: 'date_join',
+            dataIndex: 'dateJoin',
             render: (text) =>
                 text ? dayjs(new Date(text)).format('MM/YYYY') : '',
         },
         {
-            key: 'date_out',
+            key: 'dateOut',
             title: 'Ngày rời Đội',
-            dataIndex: 'date_out',
+            dataIndex: 'dateOut',
             render: (text) =>
                 text ? dayjs(new Date(text)).format('MM/YYYY') : '',
         },
@@ -166,8 +166,8 @@ const Member: React.FC = () => {
                         fullname,
                         email,
                         phone,
-                        date_join,
-                        date_out,
+                        dateJoin,
+                        dateOut,
                         gender,
                         status,
                         position,
@@ -178,8 +178,8 @@ const Member: React.FC = () => {
                         fullname,
                         email,
                         phone,
-                        date_join,
-                        date_out,
+                        dateJoin,
+                        dateOut,
                         gender,
                         status,
                         position,
@@ -193,8 +193,8 @@ const Member: React.FC = () => {
                     fullname,
                     email,
                     phone,
-                    date_join,
-                    date_out,
+                    dateJoin,
+                    dateOut,
                     gender,
                     status,
                     position,
@@ -205,8 +205,8 @@ const Member: React.FC = () => {
                     fullname,
                     email,
                     phone,
-                    date_join,
-                    date_out,
+                    dateJoin,
+                    dateOut,
                     gender,
                     status,
                     position,
@@ -224,14 +224,14 @@ const Member: React.FC = () => {
     };
 
     const handleSubmit = async (createMemberValues: CreateMemberValues) => {
-        const { birthday, date_join, ...rest } = createMemberValues;
+        const { birthday, dateJoin, ...rest } = createMemberValues;
         try {
             setIsLoading(true);
             setOpen(false);
             const { data } = await signupUser({
                 ...rest,
                 birthday: birthday && dayjs(birthday).toISOString(),
-                date_join: date_join && dayjs(date_join).toISOString(),
+                dateJoin: dateJoin && dayjs(dateJoin).toISOString(),
             });
             await getMembers();
             message.success(data.data.message);
@@ -333,7 +333,7 @@ const Member: React.FC = () => {
                     onFinish={handleSubmit}
                     initialValues={{
                         gender: 'OTHER',
-                        position: 'MEMBER',
+                        position: 'THANH_VIEN',
                         isSendMail: true,
                     }}
                 >
@@ -390,7 +390,7 @@ const Member: React.FC = () => {
                     <Form.Item label="MSSV" name="student_id">
                         <Input />
                     </Form.Item>
-                    <Form.Item label="Ngày vào Đội" name="date_join">
+                    <Form.Item label="Ngày vào Đội" name="dateJoin">
                         <DatePicker
                             placeholder=""
                             className="w-full"

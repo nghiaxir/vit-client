@@ -88,19 +88,19 @@ const ActivityDetail: React.FC = () => {
         {
             title: 'Ngày diễn ra',
             key: 'date_time',
-            render: (_: string, { start_time, end_time }: ActivityTime) => (
-                <Typography.Text type={getColorOfDate(start_time, end_time)}>
-                    {moment(start_time).format(DATE_FORMAT)}
+            render: (_: string, { startTime, endTime }: ActivityTime) => (
+                <Typography.Text type={getColorOfDate(startTime, endTime)}>
+                    {moment(startTime).format(DATE_FORMAT)}
                 </Typography.Text>
             ),
         },
         {
             title: 'Thời gian',
             key: 'hour_time',
-            render: (_: string, { start_time, end_time }: ActivityTime) => (
-                <Typography.Text type={getColorOfDate(start_time, end_time)}>
-                    {moment(start_time).format(TIME_FORMAT)} -{' '}
-                    {moment(end_time).format(TIME_FORMAT)}
+            render: (_: string, { startTime, endTime }: ActivityTime) => (
+                <Typography.Text type={getColorOfDate(startTime, endTime)}>
+                    {moment(startTime).format(TIME_FORMAT)} -{' '}
+                    {moment(endTime).format(TIME_FORMAT)}
                 </Typography.Text>
             ),
         },

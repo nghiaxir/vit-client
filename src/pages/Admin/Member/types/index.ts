@@ -7,8 +7,8 @@ export interface MemberDataType {
     fullname: string;
     email: string;
     phone: string;
-    date_join?: string | null;
-    date_out?: string | null;
+    dateJoin?: string | null;
+    dateOut?: string | null;
     gender: string;
     status: string;
     position: string;
@@ -22,13 +22,13 @@ export interface CreateMemberValues {
     school: string;
     class: string;
     student_id: string;
-    date_join: Dayjs;
+    dateJoin: Dayjs;
     gender: string;
     position: string;
 }
 
 export interface CreateUserDto
-    extends Omit<CreateMemberValues, 'birthday' | 'date_join'> {
+    extends Omit<CreateMemberValues, 'birthday' | 'dateJoin'> {
     birthday: string;
-    date_join: string;
+    dateJoin: string;
 }
