@@ -66,29 +66,29 @@ const Humans: React.FC<Props> = ({ className = '', device }) => {
             <Card
               className="max-w-sm"
               thumbnail="images/landing/card-thumbnail.png"
-              title="Anh Phạm Minh Hiệp"
+              title="Nguyễn Văn Sơn"
               subtitle="Đội trưởng"
               description="Chiến dịch Xuân yêu thương tại xã Đồng Tiến, huyện Ứng Hòa, Hà Nội tuy ngắn nhưng đã đọng lại trong tâm thức của các TNV VIT cùng toàn thể bà con làng xóm nơi đây những cảm xúc xôn xao khó tả."
             />,
             <Card
               className="max-w-sm"
               thumbnail="images/landing/card-thumbnail.png"
-              title="Anh Phạm Minh Hiệp"
-              subtitle="Đội trưởng"
+              title="Phạm Minh Hiệp"
+              subtitle="Đội phó"
               description="Chiến dịch Xuân yêu thương tại xã Đồng Tiến, huyện Ứng Hòa, Hà Nội tuy ngắn nhưng đã đọng lại trong tâm thức của các TNV VIT cùng toàn thể bà con làng xóm nơi đây những cảm xúc xôn xao khó tả."
             />,
             <Card
               className="max-w-sm"
               thumbnail="images/landing/card-thumbnail.png"
-              title="Anh Phạm Minh Hiệp"
-              subtitle="Đội trưởng"
+              title="Nguyễn Ngọc Tân"
+              subtitle="Mảng trưởng nhân sự"
               description="Chiến dịch Xuân yêu thương tại xã Đồng Tiến, huyện Ứng Hòa, Hà Nội tuy ngắn nhưng đã đọng lại trong tâm thức của các TNV VIT cùng toàn thể bà con làng xóm nơi đây những cảm xúc xôn xao khó tả."
             />,
             <Card
               className="max-w-sm"
               thumbnail="images/landing/card-thumbnail.png"
-              title="Anh Phạm Minh Hiệp"
-              subtitle="Đội trưởng"
+              title="Lê Nhật Nam"
+              subtitle="Mảng trưởng phong trào"
               description="Chiến dịch Xuân yêu thương tại xã Đồng Tiến, huyện Ứng Hòa, Hà Nội tuy ngắn nhưng đã đọng lại trong tâm thức của các TNV VIT cùng toàn thể bà con làng xóm nơi đây những cảm xúc xôn xao khó tả."
             />,
           ]}

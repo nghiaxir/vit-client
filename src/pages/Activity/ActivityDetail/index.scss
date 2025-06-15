@@ -6,10 +6,13 @@
   .activity-left {
     background-color: #d5edf1;
     border-radius: 10px;
-
     .activity-info {
       background-color: #fff;
       border-radius: 10px;
     }
+  }
+  .activity-content {
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
   }
 }

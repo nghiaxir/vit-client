@@ -57,22 +57,9 @@ const Activity: React.FC = () => {
     };
 
     const columns: ColumnsType<DataType> = [
-        // {
-        //     title: '#',
-        //     dataIndex: 'id',
-        // },
         {
             title: 'Tên hoạt động',
             dataIndex: 'name',
-        },
-        tab !== 'deleted' && {
-            title: 'Mô tả',
-            dataIndex: 'description',
-            render: (dataIndex: string) => (
-                <Typography.Text style={{ whiteSpace: 'pre-line' }}>
-                    {dataIndex}
-                </Typography.Text>
-            ),
         },
         {
             title: 'Hạn đăng ký',
@@ -225,8 +212,8 @@ const Activity: React.FC = () => {
         [tab, activities, deletedActivities]
     );
 
-    const getActivities = async () => {
-        dispatch(getAllActivity(defaultQueryParam));
+    const getActivities = async (option: string) => {
+        dispatch(getAllActivity({ ...defaultQueryParam, option }));
     };
 
     const getActivitiesDeleted = async () => {
@@ -240,12 +227,12 @@ const Activity: React.FC = () => {
     useEffect(() => {
         document.title = 'VIT | Quản lý hoạt động';
         getCampains();
-        getActivities();
+        getActivities(tab);
     }, []);
 
     useEffect(() => {
         if (tab === 'deleted') getActivitiesDeleted();
-        else getActivities();
+        else getActivities(tab);
     }, [tab]);
 
     const items: TabsProps['items'] = [

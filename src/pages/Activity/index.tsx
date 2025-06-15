@@ -24,11 +24,11 @@ const Activity: React.FC = () => {
     if (loading) return <Loading />;
 
     return (
-        <div className="activity m-6">
+        <div className="activity mt-24 p-4">
             <Typography.Title level={4}>Danh sách hoạt động</Typography.Title>
             <Row gutter={[16, 16]}>
                 {activities?.map((activity) => (
-                    <Col key={activity.id} span={6}>
+                    <Col key={activity.id} xs={24} sm={12} md={8} lg={6}>
                         <ActivityItem activity={activity} />
                     </Col>
                 ))}

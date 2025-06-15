@@ -18,6 +18,7 @@ export interface CreateActivityDto {
     isCampain: boolean;
     parentId: string;
     event_id?: number;
+    score: number;
     times: Array<{
         name: string;
         startTime: string;
@@ -47,6 +48,7 @@ export interface UpdateActivityDto extends CreateActivityDto {
         name: string;
         startTime: string;
         endTime: string;
+        numberRequire: number;
     }>;
 }
 
@@ -54,10 +56,17 @@ export const getAllActivity = createAsyncThunk<Activity[], QueryParamType>(
     'activity/getAll',
     async (params: QueryParamType = defaultQueryParam, { rejectWithValue }) => {
         try {
-            const {
-                data: { data: res },
-            } = await API.get(`${prefix}`, { params });
-            return res;
+            if (params.option) {
+                const {
+                    data: { data: res },
+                } = await API.get(`${prefix}/${params.option}`, { params });
+                return res;
+            } else {
+                const {
+                    data: { data: res },
+                } = await API.get(`${prefix}/active`, { params });
+                return res;
+            }
         } catch (error: any) {
             message.error(error.response.data.message);
             return rejectWithValue(error.response.data);

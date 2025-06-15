@@ -15,7 +15,7 @@ export interface RegisterActivity {
 }
 
 export const getActivityMember = (
-    id: number
+    id: string
 ): Promise<AxiosResponse<{ data: GetActivityMember[] }>> =>
     API.get(`${prefix}/member/${id}`);
 

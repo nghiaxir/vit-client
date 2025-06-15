@@ -7,7 +7,8 @@ export interface ActivityValues {
     location: string;
     deadline_date: Dayjs;
     deadline_time: Dayjs;
-    isCampain: boolean;
+    score: number;
+    isCampain: number;
     parentId: string;
     times: Array<{
         id?: number;

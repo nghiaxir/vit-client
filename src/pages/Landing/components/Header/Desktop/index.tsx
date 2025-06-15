@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { HashLink } from 'react-router-hash-link';
 import ArrowButton from 'src/components/ArrowButton';
 import styles from './styles.module.scss';
 import { HEADER_LINKS } from '../index';
+import { HashLink } from 'react-router-hash-link';
 
 const LandingHeaderDesktop: React.FC = () => {
     return (
         <div className={styles.landingHeader}>
-            <div className="flex justify-between px-[300px] h-[90px] fixed inset-0 z-50 bg-white border-b-2">
+            <div className="flex justify-between px-[100px] h-[90px] fixed inset-0 z-50 bg-white border-b-2">
                 <div className="flex justify-center items-center cursor-pointer">
                     <Link to="/">
                         <img
@@ -20,7 +20,7 @@ const LandingHeaderDesktop: React.FC = () => {
                     </Link>
                 </div>
                 <div className="flex pr-6 gap-12">
-                    {HEADER_LINKS?.map((link, index) => (
+                    {HEADER_LINKS.map((link, index) => (
                         <div
                             className={`${styles.navLink} my-auto text-center hover:text-blue-800 hover:font-bold`}
                             data-title={link.title}

@@ -59,7 +59,7 @@ const RightSide: React.FC = () => {
                                         <Typography.Title level={5} ellipsis>
                                             <Link
                                                 className="text-16"
-                                                to={`/profile/${item.id}`}
+                                                to={`/activity/${item.id}`}
                                             >
                                                 {item.name}
                                             </Link>

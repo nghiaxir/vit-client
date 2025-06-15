@@ -29,8 +29,8 @@ const Activities: React.FC<Props> = ({ className = '' }) => {
           <li>
             <Card
               className="max-w-md"
-              thumbnail="images/landing/card-thumbnail.png"
-              title="Xuân yêu thương 2023"
+              thumbnail="images/landing/NHSVTN.jpg"
+              title="Ngày hội Sinh viên tình nguyện 2023"
               description="Chiến dịch Xuân yêu thương tại xã Đồng Tiến, huyện Ứng Hòa, Hà Nội tuy ngắn nhưng đã đọng lại trong tâm thức của các TNV VIT cùng toàn thể bà con làng xóm nơi đây những cảm xúc xôn xao khó tả."
             />
           </li>

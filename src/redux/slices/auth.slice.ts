@@ -10,7 +10,7 @@ import {
 import { RootState } from '../store';
 
 export interface User {
-    id: number;
+    id: string;
     username: string;
     fullname: string;
     email: string;

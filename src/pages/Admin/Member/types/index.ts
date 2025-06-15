@@ -1,7 +1,7 @@
 import { Dayjs } from 'dayjs';
 
 export interface MemberDataType {
-    id: number;
+    id: string;
     key: string;
     username: string;
     fullname: string;
@@ -9,6 +9,9 @@ export interface MemberDataType {
     phone: string;
     dateJoin?: string | null;
     dateOut?: string | null;
+    school?: string | null;
+    studentId?: string | null;
+    major?: string | null;
     gender: string;
     status: string;
     position: string;

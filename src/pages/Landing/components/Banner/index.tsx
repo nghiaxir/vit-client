@@ -4,7 +4,7 @@ import styles from './styles.module.scss';
 
 const LandingBanner: React.FC = () => {
   return (
-    <div className={`${styles.landingBanner} w-full h-[calc(100vh_-_90px)] mt-[90px]`}>
+    <div className={`${styles.landingBanner} w-full h-[calc(100vh_-_90px)] mt-[60px]`}>
       <Carousel>
         <div className="w-full h-[calc(100vh_-_90px)]">
           <img

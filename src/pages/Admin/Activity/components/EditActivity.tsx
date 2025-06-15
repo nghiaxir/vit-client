@@ -40,6 +40,9 @@ const EditActivity: React.FC<EditActivityProps> = ({ activity, setOpen }) => {
                     name: data.name,
                     description: data.description,
                     location: data.location,
+                    parentId: data.parentId,
+                    score: Number(data.score),
+                    isCampain: Boolean(data.isCampain),
                     deadline: dayjs(data.deadline_date)
                         .hour(data.deadline_time.hour())
                         .minute(data.deadline_time.minute())
@@ -49,14 +52,14 @@ const EditActivity: React.FC<EditActivityProps> = ({ activity, setOpen }) => {
                     times: data.times.map((time) => ({
                         id: time.id ? time.id : 0,
                         name: time.name,
-                        number_require: time.numberRequire,
-                        start_time: dayjs(time.date)
+                        numberRequire: time.numberRequire,
+                        startTime: dayjs(time.date)
                             .hour(time.time[0].hour())
                             .minute(time.time[0].minute())
                             .second(0)
                             .millisecond(0)
                             .toISOString(),
-                        end_time: dayjs(time.date)
+                        endTime: dayjs(time.date)
                             .hour(time.time[1].hour())
                             .minute(time.time[1].minute())
                             .second(0)
@@ -73,14 +76,15 @@ const EditActivity: React.FC<EditActivityProps> = ({ activity, setOpen }) => {
         name: activity.name,
         description: activity.description,
         location: activity.location,
+        score: activity.score,
         deadline_date: dayjs(activity.deadline),
         deadline_time: dayjs(activity.deadline),
         times: activity.times.map((time) => ({
             id: time.id,
             name: time.name,
-            number_require: time.number_require,
-            date: dayjs(time.start_time),
-            time: [dayjs(time.start_time), dayjs(time.end_time)],
+            numberRequire: time.numberRequire,
+            date: dayjs(time.startTime),
+            time: [dayjs(time.startTime), dayjs(time.endTime)],
         })),
     };
 
@@ -141,6 +145,18 @@ const EditActivity: React.FC<EditActivityProps> = ({ activity, setOpen }) => {
                     ]}
                 >
                     <Input />
+                </Form.Item>
+                <Form.Item
+                    label="Điểm hoạt động"
+                    name="score"
+                    rules={[
+                        {
+                            required: true,
+                            message: 'Vui lòng nhập địa điểm diễn ra hoạt động',
+                        },
+                    ]}
+                >
+                    <Input type="number" />
                 </Form.Item>
                 <Typography>Deadline đăng ký</Typography>
                 <Row gutter={16}>
@@ -259,7 +275,7 @@ const EditActivity: React.FC<EditActivityProps> = ({ activity, setOpen }) => {
                                             <Form.Item
                                                 {...restField}
                                                 label="Số lượng"
-                                                name={[name, 'number_require']}
+                                                name={[name, 'numberRequire']}
                                                 rules={[
                                                     {
                                                         required: true,

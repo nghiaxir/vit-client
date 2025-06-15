@@ -18,7 +18,6 @@ import { createActivity } from 'redux/actions';
 import { useAppDispatch } from 'redux/store';
 import { DATE_FORMAT, TIME_FORMAT } from 'src/constants';
 import { ActivityValues } from '../types';
-import { log } from 'node:console';
 import { Campain } from '../../../../redux/slices/activity.slice';
 
 interface CreateActivityModalProps {
@@ -34,6 +33,8 @@ const CreateActivityModal: React.FC<CreateActivityModalProps> = ({
 }) => {
     const dispatch = useAppDispatch();
     const [form] = Form.useForm<ActivityValues>();
+    const isActOfCampain: number | undefined = Form.useWatch('isCampain', form);
+
     const [initialValues, setInitialValues] = useState({
         times: [{}],
     });
@@ -57,8 +58,9 @@ const CreateActivityModal: React.FC<CreateActivityModalProps> = ({
                 name: data.name,
                 description: data.description,
                 location: data.location,
-                isCampain: Boolean(data.isCampain),
+                isCampain: Boolean(data.isCampain === 2),
                 parentId: data.parentId,
+                score: Number(data.score) || 0,
                 deadline: dayjs(data.deadline_date)
                     .hour(data.deadline_time.hour())
                     .minute(data.deadline_time.minute())
@@ -165,6 +167,10 @@ const CreateActivityModal: React.FC<CreateActivityModalProps> = ({
                             },
                             {
                                 value: 1,
+                                label: 'Hoạt động trong chiến dịch',
+                            },
+                            {
+                                value: 2,
                                 label: 'Chiến dịch',
                             },
                         ]}
@@ -178,6 +184,7 @@ const CreateActivityModal: React.FC<CreateActivityModalProps> = ({
                         showSearch
                         placeholder="Chọn chiến dịch"
                         allowClear
+                        disabled={isActOfCampain !== 1}
                         optionFilterProp="label"
                         onSearch={onSearch}
                         options={listCampains.map((campain) => {
@@ -186,6 +193,21 @@ const CreateActivityModal: React.FC<CreateActivityModalProps> = ({
                                 value: campain.id,
                             };
                         })}
+                    />
+                </Form.Item>
+                <Form.Item
+                    label="Điểm hoạt động"
+                    name="score"
+                    rules={[
+                        {
+                            required: true,
+                            message: 'Vui lòng nhập điểm hoạt động',
+                        },
+                    ]}
+                >
+                    <Input
+                        placeholder="Nếu hoạt động không có điểm vui lòng nhập 0"
+                        type="number"
                     />
                 </Form.Item>
                 <Typography>Deadline đăng ký</Typography>
@@ -252,13 +274,7 @@ const CreateActivityModal: React.FC<CreateActivityModalProps> = ({
                                                     },
                                                 ]}
                                             >
-                                                <Input
-                                                    disabled={
-                                                        form.getFieldValue(
-                                                            'isCampain'
-                                                        ) == 0
-                                                    }
-                                                />
+                                                <Input />
                                             </Form.Item>
                                         </Col>
                                         <Col span={6}>
