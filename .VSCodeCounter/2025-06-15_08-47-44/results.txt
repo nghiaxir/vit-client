@@ -1,0 +1,252 @@
+Date : 2025-06-15 08:47:44
+Directory : /Users/nghiaxir/Desktop/vit-client
+Total : 141 files,  7386 codes, 61 comments, 650 blanks, all 8097 lines
+
+Languages
++--------------------+------------+------------+------------+------------+------------+
+| language           | files      | code       | comment    | blank      | total      |
++--------------------+------------+------------+------------+------------+------------+
+| TypeScript JSX     |         65 |      5,490 |         38 |        385 |      5,913 |
+| TypeScript         |         30 |      1,071 |         22 |        125 |      1,218 |
+| SCSS               |         36 |        698 |          0 |        128 |        826 |
+| JSON               |          5 |         64 |          0 |          3 |         67 |
+| JSON with Comments |          1 |         30 |          0 |          1 |         31 |
+| JavaScript         |          2 |         13 |          1 |          3 |         17 |
+| HTML               |          1 |         13 |          0 |          1 |         14 |
+| Markdown           |          1 |          7 |          0 |          4 |         11 |
++--------------------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                              | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                 |        141 |      7,386 |         61 |        650 |      8,097 |
+| . (Files)                                                                                         |          9 |        131 |          2 |         14 |        147 |
+| src                                                                                               |        132 |      7,255 |         59 |        636 |      7,950 |
+| src (Files)                                                                                       |          3 |         24 |          1 |          6 |         31 |
+| src/assets                                                                                        |          4 |         13 |          0 |          4 |         17 |
+| src/assets/lotties                                                                                |          2 |          2 |          0 |          0 |          2 |
+| src/assets/scss                                                                                   |          2 |         11 |          0 |          4 |         15 |
+| src/components                                                                                    |         26 |        805 |          6 |        108 |        919 |
+| src/components (Files)                                                                            |          1 |          9 |          0 |          1 |         10 |
+| src/components/ArrowButton                                                                        |          2 |         87 |          5 |         15 |        107 |
+| src/components/Card                                                                               |          2 |         39 |          0 |          5 |         44 |
+| src/components/Carousel                                                                           |          2 |         59 |          0 |          9 |         68 |
+| src/components/Dropdown                                                                           |          2 |         70 |          0 |          8 |         78 |
+| src/components/Footer                                                                             |          2 |         20 |          0 |          5 |         25 |
+| src/components/Header                                                                             |          3 |        205 |          0 |         26 |        231 |
+| src/components/Layout                                                                             |          3 |         40 |          1 |          8 |         49 |
+| src/components/Loading                                                                            |          2 |         32 |          0 |          5 |         37 |
+| src/components/LoginButton                                                                        |          2 |         86 |          0 |          9 |         95 |
+| src/components/Sidebar                                                                            |          2 |         98 |          0 |          9 |        107 |
+| src/components/Swiper                                                                             |          3 |         60 |          0 |          8 |         68 |
+| src/components/Swiper (Files)                                                                     |          1 |          1 |          0 |          1 |          2 |
+| src/components/Swiper/SlidesPerView                                                               |          2 |         59 |          0 |          7 |         66 |
+| src/constants                                                                                     |          4 |         79 |         19 |          9 |        107 |
+| src/pages                                                                                         |         74 |      5,369 |         30 |        398 |      5,797 |
+| src/pages (Files)                                                                                 |          1 |         19 |          0 |          1 |         20 |
+| src/pages/Activity                                                                                |          8 |        545 |          0 |         35 |        580 |
+| src/pages/Activity (Files)                                                                        |          2 |         48 |          0 |          8 |         56 |
+| src/pages/Activity/ActivityDetail                                                                 |          2 |        320 |          0 |         14 |        334 |
+| src/pages/Activity/components                                                                     |          4 |        177 |          0 |         13 |        190 |
+| src/pages/Admin                                                                                   |         26 |      2,353 |          1 |        152 |      2,506 |
+| src/pages/Admin/Activity                                                                          |         12 |      1,348 |          0 |         71 |      1,419 |
+| src/pages/Admin/Activity (Files)                                                                  |          2 |        311 |          0 |         19 |        330 |
+| src/pages/Admin/Activity/components                                                               |          5 |        934 |          0 |         44 |        978 |
+| src/pages/Admin/Activity/constants                                                                |          1 |          8 |          0 |          1 |          9 |
+| src/pages/Admin/Activity/types                                                                    |          1 |         19 |          0 |          2 |         21 |
+| src/pages/Admin/Activity/utils                                                                    |          3 |         76 |          0 |          5 |         81 |
+| src/pages/Admin/Club                                                                              |          1 |          8 |          0 |          4 |         12 |
+| src/pages/Admin/Dashboard                                                                         |          2 |        188 |          1 |         22 |        211 |
+| src/pages/Admin/Department                                                                        |          2 |          9 |          0 |          5 |         14 |
+| src/pages/Admin/Event                                                                             |          2 |          9 |          0 |          5 |         14 |
+| src/pages/Admin/Group                                                                             |          2 |          9 |          0 |          5 |         14 |
+| src/pages/Admin/Member                                                                            |          5 |        782 |          0 |         40 |        822 |
+| src/pages/Admin/Member (Files)                                                                    |          2 |        546 |          0 |         29 |        575 |
+| src/pages/Admin/Member/components                                                                 |          2 |        202 |          0 |          7 |        209 |
+| src/pages/Admin/Member/types                                                                      |          1 |         34 |          0 |          4 |         38 |
+| src/pages/Auth                                                                                    |          5 |        510 |          0 |         45 |        555 |
+| src/pages/Auth (Files)                                                                            |          1 |         78 |          0 |         13 |         91 |
+| src/pages/Auth/FirstLogin                                                                         |          1 |        104 |          0 |          8 |        112 |
+| src/pages/Auth/ForgotPassword                                                                     |          1 |        108 |          0 |          7 |        115 |
+| src/pages/Auth/Login                                                                              |          1 |         97 |          0 |          8 |        105 |
+| src/pages/Auth/ResetPassword                                                                      |          1 |        123 |          0 |          9 |        132 |
+| src/pages/Event                                                                                   |          2 |         10 |          0 |          5 |         15 |
+| src/pages/Feedback                                                                                |          2 |        192 |         22 |         16 |        230 |
+| src/pages/Home                                                                                    |          6 |        298 |          7 |         25 |        330 |
+| src/pages/Home (Files)                                                                            |          2 |         39 |          0 |          6 |         45 |
+| src/pages/Home/components                                                                         |          4 |        259 |          7 |         19 |        285 |
+| src/pages/Landing                                                                                 |         20 |        873 |          0 |         84 |        957 |
+| src/pages/Landing (Files)                                                                         |          2 |        123 |          0 |         17 |        140 |
+| src/pages/Landing/components                                                                      |         18 |        750 |          0 |         67 |        817 |
+| src/pages/Landing/components (Files)                                                              |          1 |          7 |          0 |          1 |          8 |
+| src/pages/Landing/components/About                                                                |          4 |        126 |          0 |         11 |        137 |
+| src/pages/Landing/components/About (Files)                                                        |          2 |        101 |          0 |          6 |        107 |
+| src/pages/Landing/components/About/Card                                                           |          2 |         25 |          0 |          5 |         30 |
+| src/pages/Landing/components/Activities                                                           |          2 |        143 |          0 |         19 |        162 |
+| src/pages/Landing/components/Banner                                                               |          2 |         45 |          0 |          4 |         49 |
+| src/pages/Landing/components/Contact                                                              |          1 |        120 |          0 |          7 |        127 |
+| src/pages/Landing/components/Header                                                               |          5 |        170 |          0 |         12 |        182 |
+| src/pages/Landing/components/Header (Files)                                                       |          1 |         24 |          0 |          3 |         27 |
+| src/pages/Landing/components/Header/Desktop                                                       |          2 |         56 |          0 |          4 |         60 |
+| src/pages/Landing/components/Header/Mobile                                                        |          2 |         90 |          0 |          5 |         95 |
+| src/pages/Landing/components/Humans                                                               |          2 |        103 |          0 |          5 |        108 |
+| src/pages/Landing/components/Section                                                              |          1 |         36 |          0 |          8 |         44 |
+| src/pages/NotFound                                                                                |          2 |         33 |          0 |          5 |         38 |
+| src/pages/Profile                                                                                 |          2 |        536 |          0 |         30 |        566 |
+| src/redux                                                                                         |          9 |        667 |          0 |         58 |        725 |
+| src/redux (Files)                                                                                 |          1 |         13 |          0 |          3 |         16 |
+| src/redux/actions                                                                                 |          4 |        296 |          0 |         25 |        321 |
+| src/redux/slices                                                                                  |          4 |        358 |          0 |         30 |        388 |
+| src/router                                                                                        |          3 |        116 |          2 |         10 |        128 |
+| src/services                                                                                      |          5 |        139 |          0 |         34 |        173 |
+| src/utils                                                                                         |          4 |         43 |          1 |          9 |         53 |
++---------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| filename                                                                                          | language           | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| /Users/nghiaxir/Desktop/vit-client/README.MD                                                      | Markdown           |          7 |          0 |          4 |         11 |
+| /Users/nghiaxir/Desktop/vit-client/index.html                                                     | HTML               |         13 |          0 |          1 |         14 |
+| /Users/nghiaxir/Desktop/vit-client/package.json                                                   | JSON               |         50 |          0 |          1 |         51 |
+| /Users/nghiaxir/Desktop/vit-client/postcss.config.js                                              | JavaScript         |          6 |          0 |          1 |          7 |
+| /Users/nghiaxir/Desktop/vit-client/src/App.tsx                                                    | TypeScript JSX     |         10 |          0 |          3 |         13 |
+| /Users/nghiaxir/Desktop/vit-client/src/assets/lotties/error-404.json                              | JSON               |          1 |          0 |          0 |          1 |
+| /Users/nghiaxir/Desktop/vit-client/src/assets/lotties/loading.json                                | JSON               |          1 |          0 |          0 |          1 |
+| /Users/nghiaxir/Desktop/vit-client/src/assets/scss/_variables.scss                                | SCSS               |          2 |          0 |          1 |          3 |
+| /Users/nghiaxir/Desktop/vit-client/src/assets/scss/main.scss                                      | SCSS               |          9 |          0 |          3 |         12 |
+| /Users/nghiaxir/Desktop/vit-client/src/components/ArrowButton/index.tsx                           | TypeScript JSX     |         48 |          5 |          6 |         59 |
+| /Users/nghiaxir/Desktop/vit-client/src/components/ArrowButton/styles.module.scss                  | SCSS               |         39 |          0 |          9 |         48 |
+| /Users/nghiaxir/Desktop/vit-client/src/components/Card/index.tsx                                  | TypeScript JSX     |         39 |          0 |          4 |         43 |
+| /Users/nghiaxir/Desktop/vit-client/src/components/Card/styles.module.scss                         | SCSS               |          0 |          0 |          1 |          1 |
+| /Users/nghiaxir/Desktop/vit-client/src/components/Carousel/index.tsx                              | TypeScript JSX     |         54 |          0 |          8 |         62 |
+| /Users/nghiaxir/Desktop/vit-client/src/components/Carousel/styles.module.scss                     | SCSS               |          5 |          0 |          1 |          6 |
+| /Users/nghiaxir/Desktop/vit-client/src/components/Dropdown/UserHeader.tsx                         | TypeScript JSX     |         57 |          0 |          6 |         63 |
+| /Users/nghiaxir/Desktop/vit-client/src/components/Dropdown/index.scss                             | SCSS               |         13 |          0 |          2 |         15 |
+| /Users/nghiaxir/Desktop/vit-client/src/components/Footer/index.scss                               | SCSS               |          7 |          0 |          2 |          9 |
+| /Users/nghiaxir/Desktop/vit-client/src/components/Footer/index.tsx                                | TypeScript JSX     |         13 |          0 |          3 |         16 |
+| /Users/nghiaxir/Desktop/vit-client/src/components/Header/AdminHeader.tsx                          | TypeScript JSX     |         31 |          0 |          5 |         36 |
+| /Users/nghiaxir/Desktop/vit-client/src/components/Header/Header.tsx                               | TypeScript JSX     |        107 |          0 |          8 |        115 |
+| /Users/nghiaxir/Desktop/vit-client/src/components/Header/index.scss                               | SCSS               |         67 |          0 |         13 |         80 |
+| /Users/nghiaxir/Desktop/vit-client/src/components/Layout/AdminLayout.tsx                          | TypeScript JSX     |         20 |          0 |          4 |         24 |
+| /Users/nghiaxir/Desktop/vit-client/src/components/Layout/DefaultLayout.tsx                        | TypeScript JSX     |         12 |          1 |          3 |         16 |
+| /Users/nghiaxir/Desktop/vit-client/src/components/Layout/index.scss                               | SCSS               |          8 |          0 |          1 |          9 |
+| /Users/nghiaxir/Desktop/vit-client/src/components/Loading/index.scss                              | SCSS               |         12 |          0 |          1 |         13 |
+| /Users/nghiaxir/Desktop/vit-client/src/components/Loading/index.tsx                               | TypeScript JSX     |         20 |          0 |          4 |         24 |
+| /Users/nghiaxir/Desktop/vit-client/src/components/LoginButton/index.scss                          | SCSS               |         66 |          0 |          5 |         71 |
+| /Users/nghiaxir/Desktop/vit-client/src/components/LoginButton/index.tsx                           | TypeScript JSX     |         20 |          0 |          4 |         24 |
+| /Users/nghiaxir/Desktop/vit-client/src/components/Sidebar/index.scss                              | SCSS               |         12 |          0 |          3 |         15 |
+| /Users/nghiaxir/Desktop/vit-client/src/components/Sidebar/index.tsx                               | TypeScript JSX     |         86 |          0 |          6 |         92 |
+| /Users/nghiaxir/Desktop/vit-client/src/components/Swiper/SlidesPerView/index.tsx                  | TypeScript JSX     |         42 |          0 |          4 |         46 |
+| /Users/nghiaxir/Desktop/vit-client/src/components/Swiper/SlidesPerView/styles.scss                | SCSS               |         17 |          0 |          3 |         20 |
+| /Users/nghiaxir/Desktop/vit-client/src/components/Swiper/index.tsx                                | TypeScript JSX     |          1 |          0 |          1 |          2 |
+| /Users/nghiaxir/Desktop/vit-client/src/components/index.tsx                                       | TypeScript JSX     |          9 |          0 |          1 |         10 |
+| /Users/nghiaxir/Desktop/vit-client/src/constants/common.ts                                        | TypeScript         |         18 |          3 |          5 |         26 |
+| /Users/nghiaxir/Desktop/vit-client/src/constants/index.ts                                         | TypeScript         |          2 |          0 |          1 |          3 |
+| /Users/nghiaxir/Desktop/vit-client/src/constants/position.ts                                      | TypeScript         |         50 |         16 |          1 |         67 |
+| /Users/nghiaxir/Desktop/vit-client/src/constants/type.ts                                          | TypeScript         |          9 |          0 |          2 |         11 |
+| /Users/nghiaxir/Desktop/vit-client/src/main.tsx                                                   | TypeScript JSX     |         14 |          0 |          2 |         16 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Activity/ActivityDetail/index.scss                   | SCSS               |         16 |          0 |          3 |         19 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Activity/ActivityDetail/index.tsx                    | TypeScript JSX     |        304 |          0 |         11 |        315 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Activity/components/ActivityItem.tsx                 | TypeScript JSX     |         67 |          0 |          4 |         71 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Activity/components/ParticipantsTable.tsx            | TypeScript JSX     |         97 |          0 |          5 |        102 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Activity/components/index.scss                       | SCSS               |         11 |          0 |          3 |         14 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Activity/components/index.tsx                        | TypeScript JSX     |          2 |          0 |          1 |          3 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Activity/index.scss                                  | SCSS               |          1 |          0 |          1 |          2 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Activity/index.tsx                                   | TypeScript JSX     |         47 |          0 |          7 |         54 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Activity/components/ActivityDetail.tsx         | TypeScript JSX     |         42 |          0 |          6 |         48 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Activity/components/ActivityMember.tsx         | TypeScript JSX     |        203 |          0 |         16 |        219 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Activity/components/CreateActivityModal.tsx    | TypeScript JSX     |        364 |          0 |         10 |        374 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Activity/components/EditActivity.tsx           | TypeScript JSX     |        321 |          0 |         11 |        332 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Activity/components/index.tsx                  | TypeScript JSX     |          4 |          0 |          1 |          5 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Activity/constants/index.ts                    | TypeScript         |          8 |          0 |          1 |          9 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Activity/index.scss                            | SCSS               |          0 |          0 |          1 |          1 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Activity/index.tsx                             | TypeScript JSX     |        311 |          0 |         18 |        329 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Activity/types/index.ts                        | TypeScript         |         19 |          0 |          2 |         21 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Activity/utils/convert-data.ts                 | TypeScript         |         67 |          0 |          3 |         70 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Activity/utils/get-status.ts                   | TypeScript         |          7 |          0 |          1 |          8 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Activity/utils/index.ts                        | TypeScript         |          2 |          0 |          1 |          3 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Club/index.tsx                                 | TypeScript JSX     |          8 |          0 |          4 |         12 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Dashboard/index.scss                           | SCSS               |         56 |          0 |          9 |         65 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Dashboard/index.tsx                            | TypeScript JSX     |        132 |          1 |         13 |        146 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Department/index.scss                          | SCSS               |          0 |          0 |          1 |          1 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Department/index.tsx                           | TypeScript JSX     |          9 |          0 |          4 |         13 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Event/index.scss                               | SCSS               |          0 |          0 |          1 |          1 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Event/index.tsx                                | TypeScript JSX     |          9 |          0 |          4 |         13 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Group/index.scss                               | SCSS               |          0 |          0 |          1 |          1 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Group/index.tsx                                | TypeScript JSX     |          9 |          0 |          4 |         13 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Member/components/CreateMember.tsx             | TypeScript JSX     |        201 |          0 |          6 |        207 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Member/components/index.tsx                    | TypeScript JSX     |          1 |          0 |          1 |          2 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Member/index.scss                              | SCSS               |          6 |          0 |          1 |          7 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Member/index.tsx                               | TypeScript JSX     |        540 |          0 |         28 |        568 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Member/types/index.ts                          | TypeScript         |         34 |          0 |          4 |         38 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Auth/FirstLogin/index.tsx                            | TypeScript JSX     |        104 |          0 |          8 |        112 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Auth/ForgotPassword/index.tsx                        | TypeScript JSX     |        108 |          0 |          7 |        115 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Auth/Login/index.tsx                                 | TypeScript JSX     |         97 |          0 |          8 |        105 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Auth/ResetPassword/index.tsx                         | TypeScript JSX     |        123 |          0 |          9 |        132 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Auth/index.scss                                      | SCSS               |         78 |          0 |         13 |         91 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Event/index.scss                                     | SCSS               |          4 |          0 |          2 |          6 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Event/index.tsx                                      | TypeScript JSX     |          6 |          0 |          3 |          9 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Feedback/index.scss                                  | SCSS               |         72 |          0 |         11 |         83 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Feedback/index.tsx                                   | TypeScript JSX     |        120 |         22 |          5 |        147 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Home/components/LeftSide.tsx                         | TypeScript JSX     |        110 |          0 |          8 |        118 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Home/components/Main.tsx                             | TypeScript JSX     |         38 |          0 |          3 |         41 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Home/components/RightSide.tsx                        | TypeScript JSX     |        108 |          7 |          7 |        122 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Home/components/index.tsx                            | TypeScript JSX     |          3 |          0 |          1 |          4 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Home/index.scss                                      | SCSS               |         25 |          0 |          3 |         28 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Home/index.tsx                                       | TypeScript JSX     |         14 |          0 |          3 |         17 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Landing/components/About/Card/index.tsx              | TypeScript JSX     |         20 |          0 |          4 |         24 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Landing/components/About/Card/styles.module.scss     | SCSS               |          5 |          0 |          1 |          6 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Landing/components/About/index.tsx                   | TypeScript JSX     |         91 |          0 |          4 |         95 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Landing/components/About/styles.module.scss          | SCSS               |         10 |          0 |          2 |         12 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Landing/components/Activities/index.tsx              | TypeScript JSX     |         56 |          0 |          4 |         60 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Landing/components/Activities/styles.module.scss     | SCSS               |         87 |          0 |         15 |        102 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Landing/components/Banner/index.tsx                  | TypeScript JSX     |         40 |          0 |          3 |         43 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Landing/components/Banner/styles.module.scss         | SCSS               |          5 |          0 |          1 |          6 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Landing/components/Contact/index.tsx                 | TypeScript JSX     |        120 |          0 |          7 |        127 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Landing/components/Header/Desktop/index.tsx          | TypeScript JSX     |         48 |          0 |          3 |         51 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Landing/components/Header/Desktop/styles.module.scss | SCSS               |          8 |          0 |          1 |          9 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Landing/components/Header/Mobile/index.tsx           | TypeScript JSX     |         82 |          0 |          4 |         86 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Landing/components/Header/Mobile/styles.module.scss  | SCSS               |          8 |          0 |          1 |          9 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Landing/components/Header/index.tsx                  | TypeScript JSX     |         24 |          0 |          3 |         27 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Landing/components/Humans/index.tsx                  | TypeScript JSX     |         98 |          0 |          4 |        102 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Landing/components/Humans/styles.module.scss         | SCSS               |          5 |          0 |          1 |          6 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Landing/components/Section/index.tsx                 | TypeScript JSX     |         36 |          0 |          8 |         44 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Landing/components/index.tsx                         | TypeScript JSX     |          7 |          0 |          1 |          8 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Landing/index.scss                                   | SCSS               |          8 |          0 |          2 |         10 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Landing/index.tsx                                    | TypeScript JSX     |        115 |          0 |         15 |        130 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/NotFound/index.scss                                  | SCSS               |          7 |          0 |          1 |          8 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/NotFound/index.tsx                                   | TypeScript JSX     |         26 |          0 |          4 |         30 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Profile/index.scss                                   | SCSS               |         29 |          0 |          8 |         37 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/Profile/index.tsx                                    | TypeScript JSX     |        507 |          0 |         22 |        529 |
+| /Users/nghiaxir/Desktop/vit-client/src/pages/index.tsx                                            | TypeScript JSX     |         19 |          0 |          1 |         20 |
+| /Users/nghiaxir/Desktop/vit-client/src/redux/actions/activity.action.ts                           | TypeScript         |        183 |          0 |         15 |        198 |
+| /Users/nghiaxir/Desktop/vit-client/src/redux/actions/auth.action.ts                               | TypeScript         |         76 |          0 |          6 |         82 |
+| /Users/nghiaxir/Desktop/vit-client/src/redux/actions/index.ts                                     | TypeScript         |          3 |          0 |          1 |          4 |
+| /Users/nghiaxir/Desktop/vit-client/src/redux/actions/member.action.ts                             | TypeScript         |         34 |          0 |          3 |         37 |
+| /Users/nghiaxir/Desktop/vit-client/src/redux/slices/activity.slice.ts                             | TypeScript         |        199 |          0 |         12 |        211 |
+| /Users/nghiaxir/Desktop/vit-client/src/redux/slices/auth.slice.ts                                 | TypeScript         |        125 |          0 |         11 |        136 |
+| /Users/nghiaxir/Desktop/vit-client/src/redux/slices/index.ts                                      | TypeScript         |          3 |          0 |          1 |          4 |
+| /Users/nghiaxir/Desktop/vit-client/src/redux/slices/member.slice.ts                               | TypeScript         |         31 |          0 |          6 |         37 |
+| /Users/nghiaxir/Desktop/vit-client/src/redux/store.ts                                             | TypeScript         |         13 |          0 |          3 |         16 |
+| /Users/nghiaxir/Desktop/vit-client/src/router/ProtectedRouter.tsx                                 | TypeScript JSX     |         53 |          2 |          6 |         61 |
+| /Users/nghiaxir/Desktop/vit-client/src/router/Router.tsx                                          | TypeScript JSX     |         61 |          0 |          3 |         64 |
+| /Users/nghiaxir/Desktop/vit-client/src/router/index.tsx                                           | TypeScript JSX     |          2 |          0 |          1 |          3 |
+| /Users/nghiaxir/Desktop/vit-client/src/services/activity.ts                                       | TypeScript         |         27 |          0 |          9 |         36 |
+| /Users/nghiaxir/Desktop/vit-client/src/services/admin.ts                                          | TypeScript         |          9 |          0 |          3 |         12 |
+| /Users/nghiaxir/Desktop/vit-client/src/services/auth.ts                                           | TypeScript         |         38 |          0 |          9 |         47 |
+| /Users/nghiaxir/Desktop/vit-client/src/services/axios.ts                                          | TypeScript         |         50 |          0 |          9 |         59 |
+| /Users/nghiaxir/Desktop/vit-client/src/services/user.ts                                           | TypeScript         |         15 |          0 |          4 |         19 |
+| /Users/nghiaxir/Desktop/vit-client/src/utils/get-color-of-date.ts                                 | TypeScript         |          9 |          0 |          2 |         11 |
+| /Users/nghiaxir/Desktop/vit-client/src/utils/index.ts                                             | TypeScript         |          4 |          0 |          1 |          5 |
+| /Users/nghiaxir/Desktop/vit-client/src/utils/position.ts                                          | TypeScript         |         21 |          0 |          2 |         23 |
+| /Users/nghiaxir/Desktop/vit-client/src/utils/tailwind.ts                                          | TypeScript         |          9 |          1 |          4 |         14 |
+| /Users/nghiaxir/Desktop/vit-client/src/vite-env.d.ts                                              | TypeScript         |          0 |          1 |          1 |          2 |
+| /Users/nghiaxir/Desktop/vit-client/tailwind.config.js                                             | JavaScript         |          7 |          1 |          2 |         10 |
+| /Users/nghiaxir/Desktop/vit-client/tsconfig.json                                                  | JSON with Comments |         30 |          0 |          1 |         31 |
+| /Users/nghiaxir/Desktop/vit-client/tsconfig.node.json                                             | JSON               |          9 |          0 |          1 |         10 |
+| /Users/nghiaxir/Desktop/vit-client/vercel.json                                                    | JSON               |          3 |          0 |          1 |          4 |
+| /Users/nghiaxir/Desktop/vit-client/vite.config.ts                                                 | TypeScript         |          6 |          1 |          2 |          9 |
+| Total                                                                                             |                    |      7,386 |         61 |        650 |      8,097 |
++---------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+

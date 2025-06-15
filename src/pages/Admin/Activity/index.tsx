@@ -20,6 +20,7 @@ import {
     deleteActivity,
     getAllActivity,
     getAllActivityDeleted,
+    getAllCampains,
     restoreActivity,
 } from 'redux/actions';
 import {
@@ -38,7 +39,7 @@ interface DataType extends ActivityType {
 
 const Activity: React.FC = () => {
     const dispatch = useAppDispatch();
-    const { activities, deletedActivities, loading } =
+    const { activities, deletedActivities, loading, campains } =
         useSelector(activitySelector);
     const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
     const [isViewActivityOpen, setIsViewActivityOpen] = useState(false);
@@ -56,17 +57,9 @@ const Activity: React.FC = () => {
     };
 
     const columns: ColumnsType<DataType> = [
-        // {
-        //     title: '#',
-        //     dataIndex: 'id',
-        // },
         {
             title: 'Tên hoạt động',
             dataIndex: 'name',
-        },
-        tab !== 'deleted' && {
-            title: 'Mô tả',
-            dataIndex: 'description',
         },
         {
             title: 'Hạn đăng ký',
@@ -219,22 +212,27 @@ const Activity: React.FC = () => {
         [tab, activities, deletedActivities]
     );
 
-    const getActivities = async () => {
-        dispatch(getAllActivity(defaultQueryParam));
+    const getActivities = async (option: string) => {
+        dispatch(getAllActivity({ ...defaultQueryParam, option }));
     };
 
     const getActivitiesDeleted = async () => {
         dispatch(getAllActivityDeleted(defaultQueryParam));
     };
 
+    const getCampains = async () => {
+        dispatch(getAllCampains(defaultQueryParam));
+    };
+
     useEffect(() => {
         document.title = 'VIT | Quản lý hoạt động';
-        getActivities();
+        getCampains();
+        getActivities(tab);
     }, []);
 
     useEffect(() => {
         if (tab === 'deleted') getActivitiesDeleted();
-        else getActivities();
+        else getActivities(tab);
     }, [tab]);
 
     const items: TabsProps['items'] = [
@@ -313,6 +311,7 @@ const Activity: React.FC = () => {
             <CreateActivityModal
                 show={isCreateModalOpen}
                 setShow={setIsCreateModalOpen}
+                listCampains={campains}
             />
 
             <ActivityDetail

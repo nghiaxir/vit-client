@@ -69,6 +69,7 @@ const ActivityMember: React.FC<ActivityMemberProps> = ({ activity }) => {
             message.error(error?.response?.data?.message);
         } finally {
             setLoading(false);
+            setActivityMember([]);
         }
     };
 
@@ -83,6 +84,7 @@ const ActivityMember: React.FC<ActivityMemberProps> = ({ activity }) => {
             message.error(error?.response?.data?.message);
         } finally {
             setLoading(false);
+            setActivityMember([]);
         }
     };
 
@@ -95,7 +97,7 @@ const ActivityMember: React.FC<ActivityMemberProps> = ({ activity }) => {
                     _: string,
                     { fullname, avatar, username }: ActivityMemberState
                 ) => (
-                    <div className="d-flex gap-2 justify-start align-center">
+                    <div className="flex gap-2 align-center justify-start">
                         <Avatar src={avatar}>
                             {username.charAt(0).toUpperCase()}
                         </Avatar>

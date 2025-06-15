@@ -1,0 +1,143 @@
+"filename", "language", "TypeScript JSX", "TypeScript", "SCSS", "JSON", "JSON with Comments", "JavaScript", "Markdown", "HTML", "comment", "blank", "total"
+"/Users/nghiaxir/Desktop/vit-client/README.MD", "Markdown", 0, 0, 0, 0, 0, 0, 7, 0, 0, 4, 11
+"/Users/nghiaxir/Desktop/vit-client/index.html", "HTML", 0, 0, 0, 0, 0, 0, 0, 13, 0, 1, 14
+"/Users/nghiaxir/Desktop/vit-client/package.json", "JSON", 0, 0, 0, 50, 0, 0, 0, 0, 0, 1, 51
+"/Users/nghiaxir/Desktop/vit-client/postcss.config.js", "JavaScript", 0, 0, 0, 0, 0, 6, 0, 0, 0, 1, 7
+"/Users/nghiaxir/Desktop/vit-client/src/App.tsx", "TypeScript JSX", 10, 0, 0, 0, 0, 0, 0, 0, 0, 3, 13
+"/Users/nghiaxir/Desktop/vit-client/src/assets/lotties/error-404.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"/Users/nghiaxir/Desktop/vit-client/src/assets/lotties/loading.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"/Users/nghiaxir/Desktop/vit-client/src/assets/scss/_variables.scss", "SCSS", 0, 0, 2, 0, 0, 0, 0, 0, 0, 1, 3
+"/Users/nghiaxir/Desktop/vit-client/src/assets/scss/main.scss", "SCSS", 0, 0, 9, 0, 0, 0, 0, 0, 0, 3, 12
+"/Users/nghiaxir/Desktop/vit-client/src/components/ArrowButton/index.tsx", "TypeScript JSX", 48, 0, 0, 0, 0, 0, 0, 0, 5, 6, 59
+"/Users/nghiaxir/Desktop/vit-client/src/components/ArrowButton/styles.module.scss", "SCSS", 0, 0, 39, 0, 0, 0, 0, 0, 0, 9, 48
+"/Users/nghiaxir/Desktop/vit-client/src/components/Card/index.tsx", "TypeScript JSX", 39, 0, 0, 0, 0, 0, 0, 0, 0, 4, 43
+"/Users/nghiaxir/Desktop/vit-client/src/components/Card/styles.module.scss", "SCSS", 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"/Users/nghiaxir/Desktop/vit-client/src/components/Carousel/index.tsx", "TypeScript JSX", 54, 0, 0, 0, 0, 0, 0, 0, 0, 8, 62
+"/Users/nghiaxir/Desktop/vit-client/src/components/Carousel/styles.module.scss", "SCSS", 0, 0, 5, 0, 0, 0, 0, 0, 0, 1, 6
+"/Users/nghiaxir/Desktop/vit-client/src/components/Dropdown/UserHeader.tsx", "TypeScript JSX", 57, 0, 0, 0, 0, 0, 0, 0, 0, 6, 63
+"/Users/nghiaxir/Desktop/vit-client/src/components/Dropdown/index.scss", "SCSS", 0, 0, 13, 0, 0, 0, 0, 0, 0, 2, 15
+"/Users/nghiaxir/Desktop/vit-client/src/components/Footer/index.scss", "SCSS", 0, 0, 7, 0, 0, 0, 0, 0, 0, 2, 9
+"/Users/nghiaxir/Desktop/vit-client/src/components/Footer/index.tsx", "TypeScript JSX", 13, 0, 0, 0, 0, 0, 0, 0, 0, 3, 16
+"/Users/nghiaxir/Desktop/vit-client/src/components/Header/AdminHeader.tsx", "TypeScript JSX", 31, 0, 0, 0, 0, 0, 0, 0, 0, 5, 36
+"/Users/nghiaxir/Desktop/vit-client/src/components/Header/Header.tsx", "TypeScript JSX", 107, 0, 0, 0, 0, 0, 0, 0, 0, 8, 115
+"/Users/nghiaxir/Desktop/vit-client/src/components/Header/index.scss", "SCSS", 0, 0, 67, 0, 0, 0, 0, 0, 0, 13, 80
+"/Users/nghiaxir/Desktop/vit-client/src/components/Layout/AdminLayout.tsx", "TypeScript JSX", 20, 0, 0, 0, 0, 0, 0, 0, 0, 4, 24
+"/Users/nghiaxir/Desktop/vit-client/src/components/Layout/DefaultLayout.tsx", "TypeScript JSX", 12, 0, 0, 0, 0, 0, 0, 0, 1, 3, 16
+"/Users/nghiaxir/Desktop/vit-client/src/components/Layout/index.scss", "SCSS", 0, 0, 8, 0, 0, 0, 0, 0, 0, 1, 9
+"/Users/nghiaxir/Desktop/vit-client/src/components/Loading/index.scss", "SCSS", 0, 0, 12, 0, 0, 0, 0, 0, 0, 1, 13
+"/Users/nghiaxir/Desktop/vit-client/src/components/Loading/index.tsx", "TypeScript JSX", 20, 0, 0, 0, 0, 0, 0, 0, 0, 4, 24
+"/Users/nghiaxir/Desktop/vit-client/src/components/LoginButton/index.scss", "SCSS", 0, 0, 66, 0, 0, 0, 0, 0, 0, 5, 71
+"/Users/nghiaxir/Desktop/vit-client/src/components/LoginButton/index.tsx", "TypeScript JSX", 20, 0, 0, 0, 0, 0, 0, 0, 0, 4, 24
+"/Users/nghiaxir/Desktop/vit-client/src/components/Sidebar/index.scss", "SCSS", 0, 0, 12, 0, 0, 0, 0, 0, 0, 3, 15
+"/Users/nghiaxir/Desktop/vit-client/src/components/Sidebar/index.tsx", "TypeScript JSX", 86, 0, 0, 0, 0, 0, 0, 0, 0, 6, 92
+"/Users/nghiaxir/Desktop/vit-client/src/components/Swiper/SlidesPerView/index.tsx", "TypeScript JSX", 42, 0, 0, 0, 0, 0, 0, 0, 0, 4, 46
+"/Users/nghiaxir/Desktop/vit-client/src/components/Swiper/SlidesPerView/styles.scss", "SCSS", 0, 0, 17, 0, 0, 0, 0, 0, 0, 3, 20
+"/Users/nghiaxir/Desktop/vit-client/src/components/Swiper/index.tsx", "TypeScript JSX", 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2
+"/Users/nghiaxir/Desktop/vit-client/src/components/index.tsx", "TypeScript JSX", 9, 0, 0, 0, 0, 0, 0, 0, 0, 1, 10
+"/Users/nghiaxir/Desktop/vit-client/src/constants/common.ts", "TypeScript", 0, 18, 0, 0, 0, 0, 0, 0, 3, 5, 26
+"/Users/nghiaxir/Desktop/vit-client/src/constants/index.ts", "TypeScript", 0, 2, 0, 0, 0, 0, 0, 0, 0, 1, 3
+"/Users/nghiaxir/Desktop/vit-client/src/constants/position.ts", "TypeScript", 0, 50, 0, 0, 0, 0, 0, 0, 16, 1, 67
+"/Users/nghiaxir/Desktop/vit-client/src/constants/type.ts", "TypeScript", 0, 9, 0, 0, 0, 0, 0, 0, 0, 2, 11
+"/Users/nghiaxir/Desktop/vit-client/src/main.tsx", "TypeScript JSX", 14, 0, 0, 0, 0, 0, 0, 0, 0, 2, 16
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Activity/ActivityDetail/index.scss", "SCSS", 0, 0, 16, 0, 0, 0, 0, 0, 0, 3, 19
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Activity/ActivityDetail/index.tsx", "TypeScript JSX", 304, 0, 0, 0, 0, 0, 0, 0, 0, 11, 315
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Activity/components/ActivityItem.tsx", "TypeScript JSX", 67, 0, 0, 0, 0, 0, 0, 0, 0, 4, 71
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Activity/components/ParticipantsTable.tsx", "TypeScript JSX", 97, 0, 0, 0, 0, 0, 0, 0, 0, 5, 102
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Activity/components/index.scss", "SCSS", 0, 0, 11, 0, 0, 0, 0, 0, 0, 3, 14
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Activity/components/index.tsx", "TypeScript JSX", 2, 0, 0, 0, 0, 0, 0, 0, 0, 1, 3
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Activity/index.scss", "SCSS", 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 2
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Activity/index.tsx", "TypeScript JSX", 47, 0, 0, 0, 0, 0, 0, 0, 0, 7, 54
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Activity/components/ActivityDetail.tsx", "TypeScript JSX", 42, 0, 0, 0, 0, 0, 0, 0, 0, 6, 48
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Activity/components/ActivityMember.tsx", "TypeScript JSX", 203, 0, 0, 0, 0, 0, 0, 0, 0, 16, 219
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Activity/components/CreateActivityModal.tsx", "TypeScript JSX", 364, 0, 0, 0, 0, 0, 0, 0, 0, 10, 374
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Activity/components/EditActivity.tsx", "TypeScript JSX", 321, 0, 0, 0, 0, 0, 0, 0, 0, 11, 332
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Activity/components/index.tsx", "TypeScript JSX", 4, 0, 0, 0, 0, 0, 0, 0, 0, 1, 5
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Activity/constants/index.ts", "TypeScript", 0, 8, 0, 0, 0, 0, 0, 0, 0, 1, 9
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Activity/index.scss", "SCSS", 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Activity/index.tsx", "TypeScript JSX", 311, 0, 0, 0, 0, 0, 0, 0, 0, 18, 329
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Activity/types/index.ts", "TypeScript", 0, 19, 0, 0, 0, 0, 0, 0, 0, 2, 21
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Activity/utils/convert-data.ts", "TypeScript", 0, 67, 0, 0, 0, 0, 0, 0, 0, 3, 70
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Activity/utils/get-status.ts", "TypeScript", 0, 7, 0, 0, 0, 0, 0, 0, 0, 1, 8
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Activity/utils/index.ts", "TypeScript", 0, 2, 0, 0, 0, 0, 0, 0, 0, 1, 3
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Club/index.tsx", "TypeScript JSX", 8, 0, 0, 0, 0, 0, 0, 0, 0, 4, 12
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Dashboard/index.scss", "SCSS", 0, 0, 56, 0, 0, 0, 0, 0, 0, 9, 65
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Dashboard/index.tsx", "TypeScript JSX", 132, 0, 0, 0, 0, 0, 0, 0, 1, 13, 146
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Department/index.scss", "SCSS", 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Department/index.tsx", "TypeScript JSX", 9, 0, 0, 0, 0, 0, 0, 0, 0, 4, 13
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Event/index.scss", "SCSS", 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Event/index.tsx", "TypeScript JSX", 9, 0, 0, 0, 0, 0, 0, 0, 0, 4, 13
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Group/index.scss", "SCSS", 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Group/index.tsx", "TypeScript JSX", 9, 0, 0, 0, 0, 0, 0, 0, 0, 4, 13
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Member/components/CreateMember.tsx", "TypeScript JSX", 201, 0, 0, 0, 0, 0, 0, 0, 0, 6, 207
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Member/components/index.tsx", "TypeScript JSX", 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Member/index.scss", "SCSS", 0, 0, 6, 0, 0, 0, 0, 0, 0, 1, 7
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Member/index.tsx", "TypeScript JSX", 540, 0, 0, 0, 0, 0, 0, 0, 0, 28, 568
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Admin/Member/types/index.ts", "TypeScript", 0, 34, 0, 0, 0, 0, 0, 0, 0, 4, 38
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Auth/FirstLogin/index.tsx", "TypeScript JSX", 104, 0, 0, 0, 0, 0, 0, 0, 0, 8, 112
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Auth/ForgotPassword/index.tsx", "TypeScript JSX", 108, 0, 0, 0, 0, 0, 0, 0, 0, 7, 115
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Auth/Login/index.tsx", "TypeScript JSX", 97, 0, 0, 0, 0, 0, 0, 0, 0, 8, 105
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Auth/ResetPassword/index.tsx", "TypeScript JSX", 123, 0, 0, 0, 0, 0, 0, 0, 0, 9, 132
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Auth/index.scss", "SCSS", 0, 0, 78, 0, 0, 0, 0, 0, 0, 13, 91
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Event/index.scss", "SCSS", 0, 0, 4, 0, 0, 0, 0, 0, 0, 2, 6
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Event/index.tsx", "TypeScript JSX", 6, 0, 0, 0, 0, 0, 0, 0, 0, 3, 9
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Feedback/index.scss", "SCSS", 0, 0, 72, 0, 0, 0, 0, 0, 0, 11, 83
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Feedback/index.tsx", "TypeScript JSX", 120, 0, 0, 0, 0, 0, 0, 0, 22, 5, 147
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Home/components/LeftSide.tsx", "TypeScript JSX", 110, 0, 0, 0, 0, 0, 0, 0, 0, 8, 118
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Home/components/Main.tsx", "TypeScript JSX", 38, 0, 0, 0, 0, 0, 0, 0, 0, 3, 41
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Home/components/RightSide.tsx", "TypeScript JSX", 108, 0, 0, 0, 0, 0, 0, 0, 7, 7, 122
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Home/components/index.tsx", "TypeScript JSX", 3, 0, 0, 0, 0, 0, 0, 0, 0, 1, 4
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Home/index.scss", "SCSS", 0, 0, 25, 0, 0, 0, 0, 0, 0, 3, 28
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Home/index.tsx", "TypeScript JSX", 14, 0, 0, 0, 0, 0, 0, 0, 0, 3, 17
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Landing/components/About/Card/index.tsx", "TypeScript JSX", 20, 0, 0, 0, 0, 0, 0, 0, 0, 4, 24
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Landing/components/About/Card/styles.module.scss", "SCSS", 0, 0, 5, 0, 0, 0, 0, 0, 0, 1, 6
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Landing/components/About/index.tsx", "TypeScript JSX", 91, 0, 0, 0, 0, 0, 0, 0, 0, 4, 95
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Landing/components/About/styles.module.scss", "SCSS", 0, 0, 10, 0, 0, 0, 0, 0, 0, 2, 12
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Landing/components/Activities/index.tsx", "TypeScript JSX", 56, 0, 0, 0, 0, 0, 0, 0, 0, 4, 60
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Landing/components/Activities/styles.module.scss", "SCSS", 0, 0, 87, 0, 0, 0, 0, 0, 0, 15, 102
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Landing/components/Banner/index.tsx", "TypeScript JSX", 40, 0, 0, 0, 0, 0, 0, 0, 0, 3, 43
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Landing/components/Banner/styles.module.scss", "SCSS", 0, 0, 5, 0, 0, 0, 0, 0, 0, 1, 6
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Landing/components/Contact/index.tsx", "TypeScript JSX", 120, 0, 0, 0, 0, 0, 0, 0, 0, 7, 127
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Landing/components/Header/Desktop/index.tsx", "TypeScript JSX", 48, 0, 0, 0, 0, 0, 0, 0, 0, 3, 51
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Landing/components/Header/Desktop/styles.module.scss", "SCSS", 0, 0, 8, 0, 0, 0, 0, 0, 0, 1, 9
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Landing/components/Header/Mobile/index.tsx", "TypeScript JSX", 82, 0, 0, 0, 0, 0, 0, 0, 0, 4, 86
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Landing/components/Header/Mobile/styles.module.scss", "SCSS", 0, 0, 8, 0, 0, 0, 0, 0, 0, 1, 9
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Landing/components/Header/index.tsx", "TypeScript JSX", 24, 0, 0, 0, 0, 0, 0, 0, 0, 3, 27
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Landing/components/Humans/index.tsx", "TypeScript JSX", 98, 0, 0, 0, 0, 0, 0, 0, 0, 4, 102
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Landing/components/Humans/styles.module.scss", "SCSS", 0, 0, 5, 0, 0, 0, 0, 0, 0, 1, 6
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Landing/components/Section/index.tsx", "TypeScript JSX", 36, 0, 0, 0, 0, 0, 0, 0, 0, 8, 44
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Landing/components/index.tsx", "TypeScript JSX", 7, 0, 0, 0, 0, 0, 0, 0, 0, 1, 8
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Landing/index.scss", "SCSS", 0, 0, 8, 0, 0, 0, 0, 0, 0, 2, 10
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Landing/index.tsx", "TypeScript JSX", 115, 0, 0, 0, 0, 0, 0, 0, 0, 15, 130
+"/Users/nghiaxir/Desktop/vit-client/src/pages/NotFound/index.scss", "SCSS", 0, 0, 7, 0, 0, 0, 0, 0, 0, 1, 8
+"/Users/nghiaxir/Desktop/vit-client/src/pages/NotFound/index.tsx", "TypeScript JSX", 26, 0, 0, 0, 0, 0, 0, 0, 0, 4, 30
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Profile/index.scss", "SCSS", 0, 0, 29, 0, 0, 0, 0, 0, 0, 8, 37
+"/Users/nghiaxir/Desktop/vit-client/src/pages/Profile/index.tsx", "TypeScript JSX", 507, 0, 0, 0, 0, 0, 0, 0, 0, 22, 529
+"/Users/nghiaxir/Desktop/vit-client/src/pages/index.tsx", "TypeScript JSX", 19, 0, 0, 0, 0, 0, 0, 0, 0, 1, 20
+"/Users/nghiaxir/Desktop/vit-client/src/redux/actions/activity.action.ts", "TypeScript", 0, 183, 0, 0, 0, 0, 0, 0, 0, 15, 198
+"/Users/nghiaxir/Desktop/vit-client/src/redux/actions/auth.action.ts", "TypeScript", 0, 76, 0, 0, 0, 0, 0, 0, 0, 6, 82
+"/Users/nghiaxir/Desktop/vit-client/src/redux/actions/index.ts", "TypeScript", 0, 3, 0, 0, 0, 0, 0, 0, 0, 1, 4
+"/Users/nghiaxir/Desktop/vit-client/src/redux/actions/member.action.ts", "TypeScript", 0, 34, 0, 0, 0, 0, 0, 0, 0, 3, 37
+"/Users/nghiaxir/Desktop/vit-client/src/redux/slices/activity.slice.ts", "TypeScript", 0, 199, 0, 0, 0, 0, 0, 0, 0, 12, 211
+"/Users/nghiaxir/Desktop/vit-client/src/redux/slices/auth.slice.ts", "TypeScript", 0, 125, 0, 0, 0, 0, 0, 0, 0, 11, 136
+"/Users/nghiaxir/Desktop/vit-client/src/redux/slices/index.ts", "TypeScript", 0, 3, 0, 0, 0, 0, 0, 0, 0, 1, 4
+"/Users/nghiaxir/Desktop/vit-client/src/redux/slices/member.slice.ts", "TypeScript", 0, 31, 0, 0, 0, 0, 0, 0, 0, 6, 37
+"/Users/nghiaxir/Desktop/vit-client/src/redux/store.ts", "TypeScript", 0, 13, 0, 0, 0, 0, 0, 0, 0, 3, 16
+"/Users/nghiaxir/Desktop/vit-client/src/router/ProtectedRouter.tsx", "TypeScript JSX", 53, 0, 0, 0, 0, 0, 0, 0, 2, 6, 61
+"/Users/nghiaxir/Desktop/vit-client/src/router/Router.tsx", "TypeScript JSX", 61, 0, 0, 0, 0, 0, 0, 0, 0, 3, 64
+"/Users/nghiaxir/Desktop/vit-client/src/router/index.tsx", "TypeScript JSX", 2, 0, 0, 0, 0, 0, 0, 0, 0, 1, 3
+"/Users/nghiaxir/Desktop/vit-client/src/services/activity.ts", "TypeScript", 0, 27, 0, 0, 0, 0, 0, 0, 0, 9, 36
+"/Users/nghiaxir/Desktop/vit-client/src/services/admin.ts", "TypeScript", 0, 9, 0, 0, 0, 0, 0, 0, 0, 3, 12
+"/Users/nghiaxir/Desktop/vit-client/src/services/auth.ts", "TypeScript", 0, 38, 0, 0, 0, 0, 0, 0, 0, 9, 47
+"/Users/nghiaxir/Desktop/vit-client/src/services/axios.ts", "TypeScript", 0, 50, 0, 0, 0, 0, 0, 0, 0, 9, 59
+"/Users/nghiaxir/Desktop/vit-client/src/services/user.ts", "TypeScript", 0, 15, 0, 0, 0, 0, 0, 0, 0, 4, 19
+"/Users/nghiaxir/Desktop/vit-client/src/utils/get-color-of-date.ts", "TypeScript", 0, 9, 0, 0, 0, 0, 0, 0, 0, 2, 11
+"/Users/nghiaxir/Desktop/vit-client/src/utils/index.ts", "TypeScript", 0, 4, 0, 0, 0, 0, 0, 0, 0, 1, 5
+"/Users/nghiaxir/Desktop/vit-client/src/utils/position.ts", "TypeScript", 0, 21, 0, 0, 0, 0, 0, 0, 0, 2, 23
+"/Users/nghiaxir/Desktop/vit-client/src/utils/tailwind.ts", "TypeScript", 0, 9, 0, 0, 0, 0, 0, 0, 1, 4, 14
+"/Users/nghiaxir/Desktop/vit-client/src/vite-env.d.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2
+"/Users/nghiaxir/Desktop/vit-client/tailwind.config.js", "JavaScript", 0, 0, 0, 0, 0, 7, 0, 0, 1, 2, 10
+"/Users/nghiaxir/Desktop/vit-client/tsconfig.json", "JSON with Comments", 0, 0, 0, 0, 30, 0, 0, 0, 0, 1, 31
+"/Users/nghiaxir/Desktop/vit-client/tsconfig.node.json", "JSON", 0, 0, 0, 9, 0, 0, 0, 0, 0, 1, 10
+"/Users/nghiaxir/Desktop/vit-client/vercel.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 1, 4
+"/Users/nghiaxir/Desktop/vit-client/vite.config.ts", "TypeScript", 0, 6, 0, 0, 0, 0, 0, 0, 1, 2, 9
+"Total", "-", 5490, 1071, 698, 64, 30, 13, 7, 13, 61, 650, 8097

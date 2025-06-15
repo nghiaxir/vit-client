@@ -4,21 +4,13 @@ import { LeftSide, Main, RightSide } from './components';
 import './index.scss';
 
 const Home: React.FC = () => {
-  return (
-    <div className="home mt-5">
-      <div className="left-right-side">
-        <LeftSide />
-        <RightSide />
-      </div>
-      <Row>
-        <Col span={5}></Col>
-        <Col span={14}>
-          <Main />
-        </Col>
-        <Col span={5}></Col>
-      </Row>
-    </div>
-  );
+    return (
+        <div className="home mt-5 flex gap-2">
+            <LeftSide />
+            <Main />
+            <RightSide />
+        </div>
+    );
 };
 
 export default Home;

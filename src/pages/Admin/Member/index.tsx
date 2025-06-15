@@ -1,19 +1,16 @@
 import {
     Button,
-    Checkbox,
-    Col,
-    DatePicker,
+    CheckboxChangeEvent,
     Form,
     Input,
     Modal,
+    Popconfirm,
     Radio,
-    Row,
     Select,
+    Space,
     Table,
-    Tabs,
-    TabsProps,
     Tag,
-    Typography,
+    Tooltip,
     message,
 } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
@@ -21,9 +18,9 @@ import dayjs from 'dayjs';
 import React, { useEffect, useMemo, useState } from 'react';
 import { AiOutlinePlus } from 'react-icons/ai';
 import { BsDownload } from 'react-icons/bs';
-import { MdModeEditOutline } from 'react-icons/md';
+import { MdBlock, MdModeEditOutline } from 'react-icons/md';
 import { useSelector } from 'react-redux';
-import { getAllMember } from 'redux/actions';
+import { deleteUser, getAllMember } from 'redux/actions';
 import { memberSelector } from 'redux/slices/member.slice';
 import { useAppDispatch } from 'redux/store';
 import { DATE_FORMAT } from 'src/constants';
@@ -31,17 +28,23 @@ import { Position } from 'src/constants/position';
 import { defaultQueryParam } from 'src/constants/type';
 import { importMany, signupUser } from 'src/services/auth';
 import { getPosition } from 'utils';
+import { CiBookmarkCheck } from 'react-icons/ci';
 import './index.scss';
 import { CreateMemberValues, MemberDataType } from './types';
 import { updateMemberPosition } from 'src/services/admin';
+import { HiOutlineTrash } from 'react-icons/hi2';
+import { CreateMember } from './components';
 
 export interface UpdateUserInfo {
-    id: number;
-    fullname: string;
-    username: string;
-    email: string;
-    phone: string;
-    position: string;
+    id: string;
+    fullname?: string;
+    username?: string;
+    email?: string;
+    phone?: string;
+    position?: string;
+    school?: string | null;
+    studentId?: string | null;
+    status?: string | null;
 }
 
 const Member: React.FC = () => {
@@ -60,10 +63,37 @@ const Member: React.FC = () => {
     const [filterText, setFilterText] = useState('');
     const [editModal, setEditModal] = useState(false);
     const [currMember, setCurrMember] = useState<UpdateUserInfo>();
+    const [currAct, setCurrAct] = useState<string>();
 
     const onKeyPress = (e: any) => {
         if (e.key === 'Enter') {
             setFilterText(filter);
+        }
+    };
+
+    const confirmDelete = async (
+        e: React.MouseEvent<HTMLElement, MouseEvent> | undefined
+    ) => {
+        dispatch(deleteUser(currAct!));
+    };
+
+    const confirmChangeStatus = async (
+        id: string,
+        status: string,
+        e: React.MouseEvent<HTMLElement, MouseEvent> | undefined
+    ) => {
+        try {
+            setIsLoading(true);
+            const { data } = await updateMemberPosition(id, {
+                id: id,
+                status: status,
+            });
+            await getMembers();
+            message.success('Cập nhật trạng thái tài khoản thành công');
+        } catch (error: any) {
+            message.error(error.response.data.message);
+        } finally {
+            setIsLoading(false);
         }
     };
 
@@ -95,18 +125,19 @@ const Member: React.FC = () => {
             key: 'phone',
             title: 'Số điện thoại',
             dataIndex: 'phone',
+            render: (phone) => <a href={`tel:${phone}`}>{phone}</a>,
         },
         {
-            key: 'date_join',
+            key: 'dateJoin',
             title: 'Ngày vào Đội',
-            dataIndex: 'date_join',
+            dataIndex: 'dateJoin',
             render: (text) =>
                 text ? dayjs(new Date(text)).format('MM/YYYY') : '',
         },
         {
-            key: 'date_out',
+            key: 'dateOut',
             title: 'Ngày rời Đội',
-            dataIndex: 'date_out',
+            dataIndex: 'dateOut',
             render: (text) =>
                 text ? dayjs(new Date(text)).format('MM/YYYY') : '',
         },
@@ -126,9 +157,9 @@ const Member: React.FC = () => {
                 text === 'ACTIVE' ? (
                     <Tag color="success">Hoạt động</Tag>
                 ) : text === 'INACTIVE' ? (
-                    <Tag color="warning">Không hoạt động</Tag>
+                    <Tag color="warning">Chưa kích hoạt</Tag>
                 ) : (
-                    <Tag color="error">Blocked</Tag>
+                    <Tag color="error">Bị khoá</Tag>
                 ),
         },
         {
@@ -141,16 +172,101 @@ const Member: React.FC = () => {
             key: 'action',
             title: 'Chỉnh sửa',
             render: (_: string, member: MemberDataType) => (
-                <Button
-                    icon={<MdModeEditOutline />}
-                    shape="circle"
-                    type="primary"
-                    onClick={() => {
-                        setCurrMember(member);
-                        setEditModal(true);
-                        form2.setFieldsValue(member);
-                    }}
-                />
+                <Space>
+                    <Tooltip title="Xem thông tin chi tiết">
+                        <Button
+                            className="d-center"
+                            type="primary"
+                            shape="circle"
+                            icon={<MdModeEditOutline />}
+                            onClick={() => {
+                                setCurrMember(member);
+                                setEditModal(true);
+                                form2.setFieldsValue(member);
+                            }}
+                        />
+                    </Tooltip>
+                    {member.status == 'ACTIVE' ? (
+                        <Popconfirm
+                            title="Chặn tài khoản hoạt động"
+                            description="Bạn chắc chắn muốn chặn tài khoản này?"
+                            onConfirm={(e) =>
+                                confirmChangeStatus(member.id, 'BLOCKED', e)
+                            }
+                            okText="OK"
+                            cancelText="Huỷ"
+                        >
+                            <Tooltip title="Chặn">
+                                <Button
+                                    className="d-center"
+                                    color="yellow"
+                                    variant="solid"
+                                    shape="circle"
+                                    icon={<MdBlock />}
+                                    onClick={() =>
+                                        setCurrAct(String(member.id))
+                                    }
+                                />
+                            </Tooltip>
+                        </Popconfirm>
+                    ) : (
+                        <Popconfirm
+                            title={`${
+                                currMember?.status == 'BLOCK'
+                                    ? 'Bỏ chặn tài khoản'
+                                    : 'Kích hoạt tài khoản'
+                            }`}
+                            description={`${
+                                currMember?.status == 'BLOCK'
+                                    ? 'Bạn có chắc muốn bỏ chặn tài khoản'
+                                    : 'Bạn có chắc muốn kích hoạt tài khoản'
+                            }`}
+                            onConfirm={(e) =>
+                                confirmChangeStatus(member.id, 'ACTIVE', e)
+                            }
+                            okText="OK"
+                            cancelText="Huỷ"
+                        >
+                            <Tooltip
+                                title={`${
+                                    currMember?.status == 'BLOCK'
+                                        ? 'Bỏ chặn tài khoản'
+                                        : 'Kích hoạt tài khoản'
+                                }`}
+                            >
+                                <Button
+                                    className="d-center"
+                                    color="green"
+                                    variant="solid"
+                                    shape="circle"
+                                    icon={<CiBookmarkCheck />}
+                                    onClick={() =>
+                                        setCurrAct(String(member.id))
+                                    }
+                                />
+                            </Tooltip>
+                        </Popconfirm>
+                    )}
+
+                    <Popconfirm
+                        title="Xoá tài khoản"
+                        description="Bạn chắc chắn muốn xoá tài khoản này?"
+                        onConfirm={confirmDelete}
+                        okText="OK"
+                        cancelText="Huỷ"
+                    >
+                        <Tooltip title="Xoá">
+                            <Button
+                                className="d-center"
+                                type="primary"
+                                danger
+                                shape="circle"
+                                icon={<HiOutlineTrash />}
+                                onClick={() => setCurrAct(String(member.id))}
+                            />
+                        </Tooltip>
+                    </Popconfirm>
+                </Space>
             ),
         },
     ];
@@ -166,10 +282,12 @@ const Member: React.FC = () => {
                         fullname,
                         email,
                         phone,
-                        date_join,
-                        date_out,
+                        dateJoin,
+                        dateOut,
                         gender,
                         status,
+                        school,
+                        studentId,
                         position,
                     }) => ({
                         id,
@@ -178,9 +296,11 @@ const Member: React.FC = () => {
                         fullname,
                         email,
                         phone,
-                        date_join,
-                        date_out,
+                        dateJoin,
+                        dateOut,
                         gender,
+                        school,
+                        studentId,
                         status,
                         position,
                     })
@@ -193,9 +313,11 @@ const Member: React.FC = () => {
                     fullname,
                     email,
                     phone,
-                    date_join,
-                    date_out,
+                    dateJoin,
+                    dateOut,
                     gender,
+                    school,
+                    studentId,
                     status,
                     position,
                 }) => ({
@@ -205,8 +327,10 @@ const Member: React.FC = () => {
                     fullname,
                     email,
                     phone,
-                    date_join,
-                    date_out,
+                    dateJoin,
+                    dateOut,
+                    school,
+                    studentId,
                     gender,
                     status,
                     position,
@@ -224,14 +348,14 @@ const Member: React.FC = () => {
     };
 
     const handleSubmit = async (createMemberValues: CreateMemberValues) => {
-        const { birthday, date_join, ...rest } = createMemberValues;
+        const { birthday, dateJoin, ...rest } = createMemberValues;
         try {
             setIsLoading(true);
             setOpen(false);
             const { data } = await signupUser({
                 ...rest,
                 birthday: birthday && dayjs(birthday).toISOString(),
-                date_join: date_join && dayjs(date_join).toISOString(),
+                dateJoin: dateJoin && dayjs(dateJoin).toISOString(),
             });
             await getMembers();
             message.success(data.data.message);
@@ -277,6 +401,10 @@ const Member: React.FC = () => {
         }
     };
 
+    const handleCheckSendEmail = (e: CheckboxChangeEvent) => {
+        setIsSendMail(e.target.checked);
+    };
+
     const getMembers = async () => {
         dispatch(getAllMember(defaultQueryParam));
     };
@@ -305,8 +433,7 @@ const Member: React.FC = () => {
                 formData
             );
             await getMembers();
-            message.success('Cập nhật vị trí thành viên thành công');
-            console.log(data);
+            message.success('Cập nhật thông tin thành viên thành công');
         } catch (error: any) {
             message.error(error.response.data.message);
         } finally {
@@ -318,186 +445,6 @@ const Member: React.FC = () => {
         document.title = 'VIT | Quản lý nhân sự';
         getMembers();
     }, []);
-
-    const items: TabsProps['items'] = [
-        {
-            key: 'manual',
-            label: <Typography.Text>Nhập tay</Typography.Text>,
-            children: (
-                <Form
-                    name="create-member"
-                    form={form1}
-                    className="mt-6"
-                    labelCol={{ span: 6 }}
-                    labelAlign="left"
-                    onFinish={handleSubmit}
-                    initialValues={{
-                        gender: 'OTHER',
-                        position: 'MEMBER',
-                        isSendMail: true,
-                    }}
-                >
-                    <Form.Item
-                        label="Họ tên"
-                        name="fullname"
-                        rules={[
-                            { required: true, message: 'Vui lòng nhập họ tên' },
-                        ]}
-                    >
-                        <Input />
-                    </Form.Item>
-                    <Form.Item
-                        label="Số điện thoại"
-                        name="phone"
-                        rules={[
-                            {
-                                required: true,
-                                message: 'Vui lòng nhập số điện thoại',
-                            },
-                        ]}
-                    >
-                        <Input />
-                    </Form.Item>
-                    <Form.Item
-                        label="Email"
-                        name="email"
-                        rules={[
-                            { required: true, message: 'Vui lòng nhập Email' },
-                        ]}
-                    >
-                        <Input type="email" />
-                    </Form.Item>
-                    <Form.Item label="Giới tính" name="gender">
-                        <Radio.Group>
-                            <Radio value="MALE">Nam</Radio>
-                            <Radio value="FEMALE">Nữ</Radio>
-                            <Radio value="OTHER">Khác</Radio>
-                        </Radio.Group>
-                    </Form.Item>
-                    <Form.Item label="Ngày sinh" name="birthday">
-                        <DatePicker
-                            placeholder=""
-                            className="w-full"
-                            format={DATE_FORMAT}
-                        />
-                    </Form.Item>
-                    <Form.Item label="Trường (Khoa/Viện)" name="school">
-                        <Input />
-                    </Form.Item>
-                    <Form.Item label="Lớp" name="class">
-                        <Input />
-                    </Form.Item>
-                    <Form.Item label="MSSV" name="student_id">
-                        <Input />
-                    </Form.Item>
-                    <Form.Item label="Ngày vào Đội" name="date_join">
-                        <DatePicker
-                            placeholder=""
-                            className="w-full"
-                            picker="month"
-                            format="MM/YYYY"
-                        />
-                    </Form.Item>
-                    <Form.Item
-                        id="position-select"
-                        label="Vị trí"
-                        name="position"
-                    >
-                        <Select options={Position} />
-                    </Form.Item>
-                    <Form.Item
-                        valuePropName="checked"
-                        wrapperCol={{ offset: 6, span: 18 }}
-                        name="isSendMail"
-                    >
-                        <Checkbox>Gửi email?</Checkbox>
-                    </Form.Item>
-                </Form>
-            ),
-        },
-        {
-            key: 'file',
-            label: <Typography.Text>Thêm tệp</Typography.Text>,
-            children: (
-                <>
-                    <div className="d-flex mt-6">
-                        <Button
-                            className="d-center ml-auto gap-2"
-                            type="primary"
-                            icon={<BsDownload />}
-                            onClick={handleDownload}
-                        >
-                            Tải file mẫu
-                        </Button>
-                    </div>
-                    <Row className="mt-6">
-                        <Col span={6}>
-                            <label htmlFor="upload-file">
-                                <span style={{ color: 'red' }}>* </span>
-                                File excel :
-                            </label>
-                        </Col>
-                        <Col span={18}>
-                            <input
-                                value={value}
-                                onChange={handleChangeFile}
-                                id="upload-file"
-                                type="file"
-                                name="file"
-                                accept=".xlsx,.xls"
-                            />
-                            {isFileEmpty && (
-                                <p className="mb-0" style={{ color: 'red' }}>
-                                    Bạn chưa chọn file nào
-                                </p>
-                            )}
-                        </Col>
-                    </Row>
-                    <Row className="my-4">
-                        <Col span={6}></Col>
-                        <Col span={18}>
-                            <Checkbox
-                                checked={isSendMail}
-                                onChange={(e) => {
-                                    setIsSendMail(e.target.checked);
-                                }}
-                            >
-                                Gửi email?
-                            </Checkbox>
-                        </Col>
-                    </Row>
-                    {/* <Form
-            name="upload-file"
-            form={form2}
-            className="mt-6"
-            onFinish={handleUpload}
-            labelCol={{ span: 6 }}
-            labelAlign="left"
-            initialValues={{
-              isSendMail: true,
-            }}
-          >
-            <Form.Item
-              label="File excel"
-              name="file"
-              rules={[
-                { required: true, message: 'Vui lòng tải lên file của bạn' },
-              ]}
-            >
-              <input type="file" />
-            </Form.Item>
-            <Form.Item
-              valuePropName="checked"
-              wrapperCol={{ offset: 6, span: 18 }}
-              name="isSendMail"
-            >
-              <Checkbox>Gửi email?</Checkbox>
-            </Form.Item>
-          </Form> */}
-                </>
-            ),
-        },
-    ];
 
     return (
         <div className="content member">
@@ -525,19 +472,23 @@ const Member: React.FC = () => {
                 columns={columns}
                 dataSource={dataSource}
                 size="small"
+                className="content-table"
                 bordered
             />
 
-            <Modal
-                open={open}
-                title="Thêm thành viên"
-                onCancel={handleCancel}
-                onOk={handleOK}
-                cancelText="Huỷ"
-                width={600}
-            >
-                <Tabs items={items} onChange={onChange} />
-            </Modal>
+            <CreateMember
+                form={form1}
+                handleSubmit={handleSubmit}
+                handleChangeFile={handleChangeFile}
+                isFileEmpty={isFileEmpty}
+                isSendMail={isSendMail}
+                setIsSendMail={setIsSendMail}
+                openCreateModal={open}
+                handleCancel={handleCancel}
+                handleOK={handleOK}
+                tab={tab}
+                onTabChange={onChange}
+            />
 
             <Modal
                 title="Chỉnh sửa thông tin TNV"
@@ -553,6 +504,7 @@ const Member: React.FC = () => {
                     labelCol={{ span: 8 }}
                     wrapperCol={{ span: 16 }}
                     style={{ maxWidth: 600 }}
+                    labelAlign="left"
                     initialValues={currMember}
                     onFinish={handleEditFormSubmit}
                 >
@@ -562,8 +514,42 @@ const Member: React.FC = () => {
                     <Form.Item label="Email" name="email">
                         <Input disabled />
                     </Form.Item>
-                    <Form.Item label="Số điện thoại" name="phone">
-                        <Input disabled />
+                    <Form.Item
+                        label="Họ tên"
+                        name="fullname"
+                        rules={[
+                            { required: true, message: 'Vui lòng nhập họ tên' },
+                        ]}
+                    >
+                        <Input />
+                    </Form.Item>
+                    <Form.Item
+                        rules={[
+                            {
+                                required: true,
+                                message: 'Vui lòng nhập số điện thoại',
+                            },
+                        ]}
+                        label="Số điện thoại"
+                        name="phone"
+                    >
+                        <Input maxLength={10} />
+                    </Form.Item>
+                    <Form.Item label="Giới tính" name="gender">
+                        <Radio.Group>
+                            <Radio value="MALE">Nam</Radio>
+                            <Radio value="FEMALE">Nữ</Radio>
+                            <Radio value="OTHER">Khác</Radio>
+                        </Radio.Group>
+                    </Form.Item>
+                    <Form.Item label="Trường (Khoa/Viện)" name="school">
+                        <Input />
+                    </Form.Item>
+                    <Form.Item label="Lớp" name="class">
+                        <Input />
+                    </Form.Item>
+                    <Form.Item label="MSSV" name="studentId">
+                        <Input />
                     </Form.Item>
                     <Form.Item
                         id="position-select"

@@ -88,19 +88,19 @@ const ActivityDetail: React.FC = () => {
         {
             title: 'Ngày diễn ra',
             key: 'date_time',
-            render: (_: string, { start_time, end_time }: ActivityTime) => (
-                <Typography.Text type={getColorOfDate(start_time, end_time)}>
-                    {moment(start_time).format(DATE_FORMAT)}
+            render: (_: string, { startTime, endTime }: ActivityTime) => (
+                <Typography.Text type={getColorOfDate(startTime, endTime)}>
+                    {moment(startTime).format(DATE_FORMAT)}
                 </Typography.Text>
             ),
         },
         {
             title: 'Thời gian',
             key: 'hour_time',
-            render: (_: string, { start_time, end_time }: ActivityTime) => (
-                <Typography.Text type={getColorOfDate(start_time, end_time)}>
-                    {moment(start_time).format(TIME_FORMAT)} -{' '}
-                    {moment(end_time).format(TIME_FORMAT)}
+            render: (_: string, { startTime, endTime }: ActivityTime) => (
+                <Typography.Text type={getColorOfDate(startTime, endTime)}>
+                    {moment(startTime).format(TIME_FORMAT)} -{' '}
+                    {moment(endTime).format(TIME_FORMAT)}
                 </Typography.Text>
             ),
         },
@@ -210,6 +210,23 @@ const ActivityDetail: React.FC = () => {
 
     const items: TabsProps['items'] = [
         {
+            key: 'description',
+            label: 'Nội dung',
+            children: (
+                <div>
+                    <Typography.Title level={4}>
+                        Thông tin chi tiết:
+                    </Typography.Title>
+                    <div
+                        className="activity-content p-5"
+                        style={{ whiteSpace: 'pre-line' }}
+                    >
+                        {activity?.description}
+                    </div>
+                </div>
+            ),
+        },
+        {
             key: 'times',
             label: 'Kíp hoạt động',
             children: (
@@ -249,7 +266,7 @@ const ActivityDetail: React.FC = () => {
             {(loading || registerLoading) && <Loading />}
             <div className="activity-detail p-5">
                 <Row gutter={16}>
-                    <Col span={5}>
+                    <Col xs={24} sm={24} md={8} lg={6}>
                         <div className="activity-left d-flex flex-column align-center p-3">
                             <div>
                                 <img src="https://ctsv.hust.edu.vn/static/img/activity.a80f3233.png" />
@@ -258,48 +275,34 @@ const ActivityDetail: React.FC = () => {
                                 {activity?.name}
                             </Typography.Title>
                             <div className="activity-info w-full p-5">
-                                <Typography.Title level={5}>
-                                    {activity?.description}
-                                </Typography.Title>
                                 <Typography.Title
-                                    type={
-                                        moment().isBefore(activity?.deadline)
-                                            ? 'success'
-                                            : 'danger'
-                                    }
-                                    title={
-                                        moment().isBefore(activity?.deadline)
-                                            ? 'Deadline đăng ký'
-                                            : 'Đã hết thời gian đăng ký'
-                                    }
                                     level={5}
                                     className="d-flex align-center gap-2"
                                 >
-                                    <span className="d-center">
-                                        <AiOutlineFieldTime />
-                                    </span>
-                                    <span className="d-center">{`${moment(
-                                        activity?.deadline
-                                    ).format(DATE_FORMAT)} - ${moment(
-                                        activity?.deadline
-                                    ).format(TIME_FORMAT)}`}</span>
+                                    <Row>
+                                        <Col span={9}>Hạn đăng ký:</Col>
+                                        <Col span={15}>{`${moment(
+                                            activity?.deadline
+                                        ).format(DATE_FORMAT)} - ${moment(
+                                            activity?.deadline
+                                        ).format(TIME_FORMAT)}`}</Col>
+                                    </Row>
                                 </Typography.Title>
                                 <Typography.Title
                                     level={5}
-                                    title="Địa điểm diễn ra hoạt động"
                                     className="d-flex align-center gap-2 mt-0"
                                 >
-                                    <span className="d-center">
-                                        <MdOutlineLocationOn />
-                                    </span>
-                                    <span className="d-center">
-                                        {activity?.location}
-                                    </span>
+                                    <Row>
+                                        <Col span={9}>Địa điểm:</Col>
+                                        <Col span={15}>
+                                            {activity?.location}
+                                        </Col>
+                                    </Row>
                                 </Typography.Title>
                             </div>
                         </div>
                     </Col>
-                    <Col span={19}>
+                    <Col xs={24} sm={24} md={16} lg={18}>
                         <Tabs type="card" items={items} />
                     </Col>
                 </Row>
