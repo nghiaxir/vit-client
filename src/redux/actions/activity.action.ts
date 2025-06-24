@@ -42,7 +42,7 @@ export interface GetActivityMember {
 }
 
 export interface UpdateActivityDto extends CreateActivityDto {
-    id: number;
+    id: string;
     times: Array<{
         id: number;
         name: string;

@@ -43,7 +43,7 @@ const Activity: React.FC = () => {
         useSelector(activitySelector);
     const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
     const [isViewActivityOpen, setIsViewActivityOpen] = useState(false);
-    const [currAct, setCurrAct] = useState<number>();
+    const [currAct, setCurrAct] = useState<string>();
     const [tab, setTab] = useState('active');
 
     const confirmDelete = (
