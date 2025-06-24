@@ -1,7 +1,7 @@
 import { Dayjs } from 'dayjs';
 
 export interface ActivityValues {
-    id?: number;
+    id?: string;
     name: string;
     description: string;
     location: string;

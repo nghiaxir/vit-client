@@ -10,7 +10,7 @@ export interface ConfirmationDto {
 }
 
 export interface RegisterActivity {
-    activityId: number;
+    activityId: string;
     timeId: number;
 }
 

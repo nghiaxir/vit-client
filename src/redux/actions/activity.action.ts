@@ -42,7 +42,7 @@ export interface GetActivityMember {
 }
 
 export interface UpdateActivityDto extends CreateActivityDto {
-    id: number;
+    id: string;
     times: Array<{
         id: number;
         name: string;
@@ -155,9 +155,9 @@ export const updateActivity = createAsyncThunk<Activity, UpdateActivityDto>(
     }
 );
 
-export const deleteActivity = createAsyncThunk<number, number>(
+export const deleteActivity = createAsyncThunk<string, string>(
     'activity/delete',
-    async (id: number, { rejectWithValue }) => {
+    async (id: string, { rejectWithValue }) => {
         try {
             const { data } = await API.delete(`${prefix}/${id}`);
             message.success(data.data.message);
@@ -169,9 +169,9 @@ export const deleteActivity = createAsyncThunk<number, number>(
     }
 );
 
-export const restoreActivity = createAsyncThunk<number, number>(
+export const restoreActivity = createAsyncThunk<string, string>(
     'activity/restore',
-    async (id: number, { rejectWithValue }) => {
+    async (id: string, { rejectWithValue }) => {
         try {
             const { data } = await API.put(`${prefix}/restore/${id}`);
             message.success(data.data.message);

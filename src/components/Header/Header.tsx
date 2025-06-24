@@ -8,6 +8,7 @@ import { authSelector, logout } from 'redux/slices/auth.slice';
 import { useAppDispatch } from 'redux/store';
 import { COMMON } from 'src/constants';
 import './index.scss';
+import { IoHomeOutline } from 'react-icons/io5';
 
 const NavLinkItems = [
     {
@@ -43,6 +44,11 @@ const Header: React.FC = () => {
             label: <Link to="/profile">Thông tin cá nhân</Link>,
             icon: <BiUser />,
         },
+        {
+            key: '3',
+            label: <Link to="/home">Trang chủ</Link>,
+            icon: <IoHomeOutline />            ,
+        },
         user?.position === 'ADMIN' && {
             key: '2',
             label: <Link to="/admin">Trang quản trị</Link>,
@@ -53,7 +59,7 @@ const Header: React.FC = () => {
         },
         {
             key: '4',
-            label: <span>Đăng xuẩt</span>,
+            label: <span>Đăng xuất</span>,
             danger: true,
             icon: <BiLogOutCircle />,
             onClick: () => {

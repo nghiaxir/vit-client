@@ -125,7 +125,7 @@ const Dashboard: React.FC = () => {
                   <Link to={`/profile/${member.id}`}>{member.fullname}</Link>
                 </p>
                 <p>
-                  Đã tham gia <b>{member.count}</b> hoạt động trong tháng này
+                  Tham gia <b>{member.count}</b> hoạt động trong tháng
                 </p>
               </div>
             </div>
