@@ -1,7 +1,8 @@
 import animationData from 'assets/lotties/error-404.json';
 import { LoginButton } from 'components';
 import React from 'react';
-import Lottie from 'react-lottie';
+// import Lottie from 'react-lottie';
+import Lottie from 'lottie-react';
 import { useNavigate } from 'react-router-dom';
 import './index.scss';
 
@@ -18,8 +19,11 @@ const NotFound: React.FC = () => {
 
   return (
     <div className="not-found-container">
-      <Lottie options={defaultOptions} height={500} width={500} />
-      <LoginButton onClick={() => navigate('/home', { replace: true })}>
+      <Lottie animationData={animationData} loop={true}
+      autoplay={true}
+      style={{ height: 300, width: 300 }} 
+      />
+      <LoginButton onClick={() => navigate('/', { replace: true })}>
         quay lại trang chủ
       </LoginButton>
     </div>

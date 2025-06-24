@@ -16,7 +16,7 @@ import { ActivityMemberState } from 'src/pages/Admin/Activity/components/Activit
 import { convertData } from 'src/pages/Admin/Activity/utils';
 
 export interface Activity {
-    id: number;
+    id: string;
     name: string;
     description: string;
     location: string;
@@ -150,7 +150,7 @@ export const activitySlice = createSlice({
         });
         builder.addCase(
             deleteActivity.fulfilled,
-            (state: ActivityState, action: PayloadAction<number>) => {
+            (state: ActivityState, action: PayloadAction<string>) => {
                 state.activities = state.activities.filter(
                     (act: Activity) => act.id !== action.payload
                 );
@@ -165,7 +165,7 @@ export const activitySlice = createSlice({
         });
         builder.addCase(
             restoreActivity.fulfilled,
-            (state: ActivityState, action: PayloadAction<number>) => {
+            (state: ActivityState, action: PayloadAction<string>) => {
                 state.deletedActivities = state.deletedActivities.filter(
                     (act: Activity) => act.id !== action.payload
                 );

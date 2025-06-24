@@ -1,7 +1,7 @@
 import animationData from 'assets/lotties/loading.json';
 import React from 'react';
-import Lottie from 'react-lottie';
 import './index.scss';
+import Lottie from 'lottie-react';
 
 const Loading: React.FC = () => {
   const defaultOptions = {
@@ -15,7 +15,9 @@ const Loading: React.FC = () => {
 
   return (
     <div className="loading-container">
-      <Lottie options={defaultOptions} height={100} width={100} />
+      <Lottie animationData={animationData} loop={true}
+      autoplay={true}
+      style={{ height: 100, width: 100 }}  />
     </div>
   );
 };
